@@ -1,0 +1,13 @@
+<p>
+  <b>Fname:</b>
+  <%=h @author.fname %>
+</p>
+
+<p>
+  <b>Lname:</b>
+  <%=h @author.lname %>
+</p>
+
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>

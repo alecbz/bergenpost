@@ -1,0 +1,26 @@
+<h1>Listing articles</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <!--<th>Body</th>-->
+    <!--<th>Time posted</th>-->
+    <th>Author</th>
+  </tr>
+
+<% for article in @articles %>
+  <tr>
+    <td><%=link_to(h(article.title),article) %></td>
+    <!--<td><%=h article.body %></td>-->
+    <!--<td><%=h article.time_posted %></td>-->
+    <td><%=link_to(h(article.author),article.author)%></td>
+    <!--<td><%= link_to 'Show', article %></td>-->
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New article', new_article_path %>
