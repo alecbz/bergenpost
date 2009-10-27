@@ -32,7 +32,7 @@
        <div class="block_content_left">
             	 <div class="block_inside">
             	   	<h3>Content</h3>
-            	    <p><%= 6.times { |i| puts "Sentence #{i}" }%></p>
+            	    <%= 5.times { |i| "<p>Sentence #{i}</p>"} %>
                   </div>    
                                      
         </div>
@@ -40,14 +40,14 @@
         <div class="block_content_left">
             	 <div class="block_inside">
                    	<h3>Content</h3>
-            	   	<p>%= 6.times { |i| puts "Sentence #{i}" }%></p>
+            	   	<p><% 6.times { |i| "Sentence #{i}" } %></p>
    	      		</div>
         </div>
  
         <div class="block_content_left">
             	 <div class="block_inside">
             	   	<h3>Content</h3>
-            	    <p>%= 6.times { |i| puts "Sentence #{i}" }%></p>
+            	    <p><% 6.times { |i| "Sentence #{i}" } %></p>
    	    	    </div>
 		</div>
 	</div>
