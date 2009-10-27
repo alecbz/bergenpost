@@ -35,21 +35,24 @@
             	   	<% 6.times do |i| %>
             	    <%= "Sentence #{i + 1}" %>
             	    <% end %>
-                  </p></div>    
-                                     
+                  </p></div>
         </div>
         
         <div class="block_content_left">
             	 <div class="block_inside">
                    	<h3>Content</h3>
-            	   	<p>The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs.</p>
+            	   	<% 3.times do |i| %>
+						<p>Sentence <%=i%></p>
+					<% end %>
    	      		</div>
         </div>
  
         <div class="block_content_left">
             	 <div class="block_inside">
             	   	<h3>Content</h3>
-            	    <p>The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs.</p>
+            	    <% 3.times do |i| %>
+						<p>Sentence <%=i%></p>
+					<% end %>
    	    	    </div>
 		</div>
 	</div>
