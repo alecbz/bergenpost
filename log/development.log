@@ -16906,3 +16906,498 @@ ActionController::RoutingError (No route matches "/images/" with {:method=>:get}
     /home/alec/passenger/bin/passenger-spawn-server:61
 
 Rendering /home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing HomeController#index (for ::1 at 2009-10-26 18:29:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzBjN2U4ZjJiZDVmM2EzZDBlNjI5NTA4MTM2ZTEx
+ZmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--06606bff01105e115892279d8d669c9289c119b3
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering home/index
+Completed in 0.00259 (385 reqs/sec) | Rendering: 0.00151 (58%) | DB: 0.00000 (0%) | 200 OK [http://localhost/bergenpost/]
+
+
+Processing Base#index (for ::1 at 2009-10-26 18:29:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzBjN2U4ZjJiZDVmM2EzZDBlNjI5NTA4MTM2ZTEx
+ZmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--06606bff01105e115892279d8d669c9289c119b3
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /home/alec/passenger/lib/phusion_passenger/railz/request_handler.rb:50:in `process_request'
+    /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/bin/passenger-spawn-server:61
+
+Rendering /home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing HomeController#index (for ::1 at 2009-10-26 23:10:54) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzBjN2U4ZjJiZDVmM2EzZDBlNjI5NTA4MTM2ZTEx
+ZmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--06606bff01105e115892279d8d669c9289c119b3
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering home/index
+Completed in 0.00281 (355 reqs/sec) | Rendering: 0.00172 (61%) | DB: 0.00000 (0%) | 200 OK [http://localhost/bergenpost/]
+
+
+Processing Base#index (for ::1 at 2009-10-26 23:10:54) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzBjN2U4ZjJiZDVmM2EzZDBlNjI5NTA4MTM2ZTEx
+ZmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--06606bff01105e115892279d8d669c9289c119b3
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /home/alec/passenger/lib/phusion_passenger/railz/request_handler.rb:50:in `process_request'
+    /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/bin/passenger-spawn-server:61
+
+Rendering /home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing HomeController#index (for ::1 at 2009-10-26 23:11:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzBjN2U4ZjJiZDVmM2EzZDBlNjI5NTA4MTM2ZTEx
+ZmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--06606bff01105e115892279d8d669c9289c119b3
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering home/index
+Completed in 0.00205 (487 reqs/sec) | Rendering: 0.00048 (23%) | DB: 0.00000 (0%) | 200 OK [http://localhost/bergenpost/]
+
+
+Processing Base#index (for ::1 at 2009-10-26 23:11:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzBjN2U4ZjJiZDVmM2EzZDBlNjI5NTA4MTM2ZTEx
+ZmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--06606bff01105e115892279d8d669c9289c119b3
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /home/alec/passenger/lib/phusion_passenger/railz/request_handler.rb:50:in `process_request'
+    /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/bin/passenger-spawn-server:61
+
+Rendering /home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing HomeController#index (for ::1 at 2009-10-26 23:13:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzBjN2U4ZjJiZDVmM2EzZDBlNjI5NTA4MTM2ZTEx
+ZmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--06606bff01105e115892279d8d669c9289c119b3
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering home/index
+Completed in 0.00410 (243 reqs/sec) | Rendering: 0.00243 (59%) | DB: 0.00000 (0%) | 200 OK [http://localhost/bergenpost/]
+
+
+Processing Base#index (for ::1 at 2009-10-26 23:13:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzBjN2U4ZjJiZDVmM2EzZDBlNjI5NTA4MTM2ZTEx
+ZmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--06606bff01105e115892279d8d669c9289c119b3
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /home/alec/passenger/lib/phusion_passenger/railz/request_handler.rb:50:in `process_request'
+    /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/bin/passenger-spawn-server:61
+
+Rendering /home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing HomeController#index (for ::1 at 2009-10-26 23:13:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzBjN2U4ZjJiZDVmM2EzZDBlNjI5NTA4MTM2ZTEx
+ZmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--06606bff01105e115892279d8d669c9289c119b3
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering home/index
+ERROR: compiling _run_erb_47app47views47home47index46html46erb RAISED compile error
+/home/alec/bergenpost/app/views/home/index.html.erb:35: syntax error, unexpected '+', expecting '|'
+;  6.times do |i + 1| ; _erbout.concat "\n            \t    "
+                  ^
+/home/alec/bergenpost/app/views/home/index.html.erb:88: syntax error, unexpected kEND, expecting $end
+Function body: def _run_erb_47app47views47home47index46html46erb(local_assigns)
+_erbout = ''; _erbout.concat "<!--<h1>Home#index</h1>\n<p>Find me in app/views/home/index.html.erb</p>-->\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<title>Bergen Post::More Here</title>\n<link href=\"stylesheets/homestyle.css\" rel=\"stylesheet\" type=\"text/css\" />\n</head>\n\n<body>\n    <div id=\"main\">\n    \t<div class=\"container\">\n        \t<div id=\"header\">  \n\t\t\t\t<ul id=\"menu\">\n   \t  \t\t\t  <li><a href=\"#\">Popular </a></li>\n         \t\t  <li><a href=\"#\">Recent </a></li>\n          \t\t  <li><a href=\"#\">Academies</a></li>\n       \t\t\t  <li><a href=\"#\">Teachers</a></li>\n\t              <li><a href=\"#\">Letters</a></li>\n                  <li><a href=\"#\">Dear Gupternan</a></li>\n                  <li><a href=\"#\">Anti-Gossip</a></li>\n   \t\t\t  </ul>\n<a href=\"/bergenpost/\"><div id=\"logo\">\n     \t\t\t\t<h1>Bergen Post </h1>\n     \t\t\t\t<small>Subtitle Here</small>\t\t\t\t</div></a>\n                              </div>\n            <div id=\"search\">\n            <input name=\"Search\" type=\"text\" value=\"Search\" size=\"15\" maxlength=\"35\" /><input name=\"Submit\" type=\"button\" value=\"Enter\" />\n          </div>\n<div id=\"block_columns\">  \n       <div class=\"block_content_left\">\n            \t <div class=\"block_inside\">\n            \t   \t<h3>Content</h3><p>\n            \t   \t"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;  6.times do |i + 1| ; _erbout.concat "\n            \t    "
+; _erbout.concat(( "Sentence #{i}" ).to_s); _erbout.concat "\n            \t    "
+;  end ; _erbout.concat "\n                  </p></div>    \n                                     \n        </div>\n        \n        <div class=\"block_content_left\">\n            \t <div class=\"block_inside\">\n                   \t<h3>Content</h3>\n            \t   \t<p>The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs.</p>\n   \t      \t\t</div>\n        </div>\n \n        <div class=\"block_content_left\">\n            \t <div class=\"block_inside\">\n            \t   \t<h3>Content</h3>\n            \t    <p>The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs. The quick brown box jumped over the lazy dogs.</p>\n   \t    \t    </div>\n\t\t</div>\n\t</div>\n</div>\n\n\t<div id=\"footer\">\n         <div class=\"footer_column long\">  \n               <h3>Site by eamon fay, Design by Jorge Soto</h3>  \n               <p>The Bergen Post is a website that blah blah put your information here or send it to me and I will                  add it to the site.  If you need anything else to be managed then just ask this is just filler,                  tons and tons of filler because it is needed for no reason.</p>  \n        </div>  \n  \n        <div class=\"footer_column\">  \n               <h3>More Links</h3>  \n           \t\t\t <ul>  \n                \t\t<li><a href=\"#\">Links!</a></li>  \n                \t\t<li><a href=\"#\">Links!</a></li>  \n                \t\t<li><a href=\"#\">Links!</a></li>  \n                \t\t<li><a href=\"#\">Links!</a></li>  \n                \t\t<li><a href=\"#\">Links!</a></li>  \n               \t\t</ul>  \n        </div>  \n              \n           <div class=\"footer_column\">  \n               <h3>RSS</h3>  \n           \t\t\t <ul>  \n                 \t  \t<li><a href=\"\">RSS Feed</a></li>  \n                   \t\t<li><a href=\"\">What is RSS?</a></li>  \n               \t\t</ul>  \n           </div>  \n\n    </div>\n</body>\n</html>\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; _erbout
+end
+Backtrace: /home/alec/bergenpost/app/views/home/index.html.erb:88:in `compile_template'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_view/template.rb:55:in `prepare!'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_view/template.rb:34:in `render'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/base.rb:841:in `render_with_no_layout'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/layout.rb:259:in `render_without_benchmark'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/alec/bergenpost/vendor/rails/activerecord/lib/../../activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/base.rb:1157:in `default_render'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `passenger_orig_perform_action'
+/home/alec/bergenpost/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/home/alec/bergenpost/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `passenger_orig_perform_action'
+/home/alec/passenger/lib/phusion_passenger/railz/request_handler.rb:65:in `perform_action'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+/home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+/home/alec/passenger/lib/phusion_passenger/railz/request_handler.rb:50:in `process_request'
+/home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+/home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+/home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+/home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+/home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+/home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+/home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+/home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+/home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+/home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+/home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+/home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+/home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+/home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+/home/alec/passenger/bin/passenger-spawn-server:61
+
+
+ActionView::TemplateError (compile error
+/home/alec/bergenpost/app/views/home/index.html.erb:35: syntax error, unexpected '+', expecting '|'
+;  6.times do |i + 1| ; _erbout.concat "\n            \t    "
+                  ^
+/home/alec/bergenpost/app/views/home/index.html.erb:88: syntax error, unexpected kEND, expecting $end) on line #35 of home/index.html.erb:
+32:        <div class="block_content_left">
+33:             	 <div class="block_inside">
+34:             	   	<h3>Content</h3><p>
+35:             	   	<% 6.times do |i + 1| %>
+36:             	    <%= "Sentence #{i}" %>
+37:             	    <% end %>
+38:                   </p></div>    
+
+    app/views/home/index.html.erb:88:in `compile_template'
+    vendor/rails/actionpack/lib/action_view/template.rb:55:in `prepare!'
+    vendor/rails/actionpack/lib/action_view/template.rb:34:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:841:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:259:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1157:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `passenger_orig_perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `passenger_orig_perform_action'
+    /home/alec/passenger/lib/phusion_passenger/railz/request_handler.rb:65:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /home/alec/passenger/lib/phusion_passenger/railz/request_handler.rb:50:in `process_request'
+    /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/bin/passenger-spawn-server:61
+
+Rendering /home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for ::1 at 2009-10-26 23:13:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzBjN2U4ZjJiZDVmM2EzZDBlNjI5NTA4MTM2ZTEx
+ZmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--06606bff01105e115892279d8d669c9289c119b3
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering home/index
+Completed in 0.00412 (242 reqs/sec) | Rendering: 0.00236 (57%) | DB: 0.00000 (0%) | 200 OK [http://localhost/bergenpost/]
+
+
+Processing Base#index (for ::1 at 2009-10-26 23:13:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzBjN2U4ZjJiZDVmM2EzZDBlNjI5NTA4MTM2ZTEx
+ZmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--06606bff01105e115892279d8d669c9289c119b3
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /home/alec/passenger/lib/phusion_passenger/railz/request_handler.rb:50:in `process_request'
+    /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/bin/passenger-spawn-server:61
+
+Rendering /home/alec/bergenpost/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
