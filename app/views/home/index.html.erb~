@@ -31,20 +31,11 @@
 <div id="block_columns">  
        <div class="block_content_left">
             	 <div class="block_inside">
-<<<<<<< .merge_file_6LAjn2
             	   	<h3>Content</h3><p>
             	   	<% 6.times do |i| %>
-            	    <%= "Sentence #{i + 1}" %>
+            	    <%= "The quick brown fox jumped over the lazy dogs." %>
             	    <% end %>
-                  </p></div>    
-=======
-            	   	<h3>Content</h3>
-					<% 3.times do |i| %>
-						<p>Sentence <%=i%></p>
-					<% end %>
-                  </div>    
->>>>>>> .merge_file_ERh421
-                                     
+                  </p></div>
         </div>
         
         <div class="block_content_left">
