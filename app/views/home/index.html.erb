@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Bergen Post::More Here</title>
+<title>Bergen Post</title>
 <link href="stylesheets/homestyle.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -28,34 +28,15 @@
             <div id="search">
             <input name="Search" type="text" value="Search" size="15" maxlength="35" /><input name="Submit" type="button" value="Enter" />
           </div>
-<div id="block_columns">  
+<div id="block_columns">
+  <% @latest_articles.each do |a| %>
        <div class="block_content_left">
             	 <div class="block_inside">
-            	   	<h3>Content</h3><p>
-            	   	<% 6.times do |i| %>
-            	    <%= "The quick brown fox jumped over the lazy dogs." %>
-            	    <% end %>
+            	   	<h3><%= link_to a.title, a %></h3><p>
+            	    <%= a.body %>
                   </p></div>
         </div>
-        
-        <div class="block_content_left">
-            	 <div class="block_inside">
-                   	<h3>Content</h3><p>
-            	   	<% 6.times do |i| %>
-            	    <%= "The quick brown fox jumped over the lazy dogs." %>
-            	    <% end %>
-                  </p>
-   	      		</div>
-        </div>
- 
-        <div class="block_content_left">
-            	 <div class="block_inside">
-            	   	<h3>Content</h3><p>
-            	   	<% 6.times do |i| %>
-            	    <%= "The quick brown fox jumped over the lazy dogs." %>
-            	    <% end %>
-                  </p>
-   	    	    </div>
+  <% end %>
 		</div>
 	</div>
 </div>

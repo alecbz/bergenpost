@@ -16,6 +16,16 @@ class ArticlesController < ApplicationController
   # GET /articles/1.xml
   def show
     @article = Article.find(params[:id])
+    begin
+      @prev = Article.find((params[:id].to_i-1).to_s)
+    rescue
+      @prev = nil
+    end
+    begin
+      @next = Article.find((params[:id].to_i+1).to_s)
+    rescue
+      @next = nil
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -38,6 +48,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
     @article = Article.find(params[:id])
+    @authors = Author.find(:all)
   end
 
   # POST /articles

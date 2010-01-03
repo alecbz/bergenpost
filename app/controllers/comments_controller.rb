@@ -44,3 +44,7 @@ class CommentsContoller < ApplicationController
         format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
       end
     end
+  end
+  
+  def update
+    
