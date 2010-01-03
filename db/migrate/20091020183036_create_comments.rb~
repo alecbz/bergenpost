@@ -3,7 +3,7 @@ class CreateComments < ActiveRecord::Migration
     create_table :comments do |t|
       t.string :name
       t.text :body
-      # t.datetime :time_posted     removed manually
+      t.datetime :time_posted
       t.references :article
 
       t.timestamps

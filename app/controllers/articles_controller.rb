@@ -57,7 +57,7 @@ class ArticlesController < ApplicationController
   # POST /articles.xml
   def create
     @article = Article.new(params[:article])
-    @article.time_posted = DateTime.now
+    #@article.time_posted = DateTime.now
     @article.author = Author.find(params[:author][:id])
 
     respond_to do |format|

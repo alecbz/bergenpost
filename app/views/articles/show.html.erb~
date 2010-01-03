@@ -10,7 +10,7 @@
 
 <p>
   <b>Time posted:</b>
-  <%=h @article.time_posted %>
+  <%=h @article.created_at %>
 </p>
 
 <p>
@@ -98,10 +98,10 @@
             <% @comments.each do |comment| %>
             <h6><%= comment.name %> (<%= comment.created_at %>)</h6>
             <p><%= comment.body %></p>
+                            ------------------------------------
             <% end %>
             <!--<h6>Eamon Fay (time/date)</h6>
                 <p>Great postlololol</p>-->
-                ------------------------------------
            <p>Name:<input name="name" type="text" size="15" maxlength="45" /></p>
               Comment:
            <textarea name="comment" cols="50" rows="5"></textarea>

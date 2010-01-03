@@ -3,7 +3,7 @@ class CreateArticles < ActiveRecord::Migration
     create_table :articles do |t|
       t.string :title
       t.text :body
-      t.datetime :time_posted
+      # t.datetime :time_posted     removed manually
       t.references :author
 
       t.timestamps
