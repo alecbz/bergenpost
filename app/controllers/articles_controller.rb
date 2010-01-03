@@ -26,6 +26,8 @@ class ArticlesController < ApplicationController
     rescue
       @next = nil
     end
+    
+    @comments = Comment.find_all_by_article_id(@article)
 
     respond_to do |format|
       format.html # show.html.erb

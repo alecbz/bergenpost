@@ -61,14 +61,12 @@
             	    <%= link_to "Previous Article", @prev %>
             	    <% else %>
             	    <%= link_to "Previous Article", @article %>
-            	    <% end %>
-            	    <!--<a href="#">&lt;--Previous Article</a>--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            	    <% end %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <% unless @next.nil? %>
             	    <%= link_to "Next Article", @next %>
             	    <% else %>
             	    <%= link_to "Next Article", @article %>
             	    <% end %>
-            	    <!--<a href="#">Next Article--&gt;</a></p>-->
 
           </div>                         
         </div>
@@ -97,9 +95,13 @@
         <div class="comments">
         	<div class="block_inside">
             <h3>Comments</h3>
-            <h6>Eamon Fay (time/date)</h6>
-                <p>Great postlololol</p>
-                ------------------------------------
+            <% @comments.each do |comment| %>
+            <h6><%= comment.name %> (<%= comment.created_at %>)</h6>
+            <p><%= comment.body %></p>
+                            ------------------------------------
+            <% end %>
+            <!--<h6>Eamon Fay (time/date)</h6>
+                <p>Great postlololol</p>-->
            <p>Name:<input name="name" type="text" size="15" maxlength="45" /></p>
               Comment:
            <textarea name="comment" cols="50" rows="5"></textarea>
