@@ -27,7 +27,10 @@ class ArticlesController < ApplicationController
       @next = nil
     end
     
-    @comments = Comment.find_all_by_article_id(@article)
+    unless params[:comment].nil? or params[:comment].empty?
+      @comment = @article.comments.build(params[:comment])
+      @comment.save
+    end
 
     respond_to do |format|
       format.html # show.html.erb

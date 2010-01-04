@@ -95,17 +95,24 @@
         <div class="comments">
         	<div class="block_inside">
             <h3>Comments</h3>
-            <% @comments.each do |comment| %>
+            <% @article.comments.each do |comment| %>
             <h6><%= comment.name %> (<%= comment.created_at %>)</h6>
             <p><%= comment.body %></p>
                             ------------------------------------
             <% end %>
             <!--<h6>Eamon Fay (time/date)</h6>
                 <p>Great postlololol</p>-->
-           <p>Name:<input name="name" type="text" size="15" maxlength="45" /></p>
-              Comment:
-           <textarea name="comment" cols="50" rows="5"></textarea>
-           <input name="submit" type="button" value="Submit" />
+            <% @article.comments.build #if @article.comments.empty? %>
+            <% form_for @article do |article_form| %>
+            <% article_form.fields_for :comments do |comment_form| %>
+            <% if comment_form.object.new_record? %>   
+          <p>
+              <%= comment_form.label :name, "Name:" %><%= comment_form.text_field :name %><!--<input name="name" type="text" size="15" maxlength="45" />--></p>
+              <%= comment_form.label :body, "Comment:" %> <!--Comment:-->
+           <%= comment_form.text_area :body, :cols => 50, :rows => 5 %> <!--<textarea name="comment" cols="50" rows="5"></textarea>-->
+           <% end %>
+           <%= article_form.submit "Submit" %> <!--<input name="submit" type="button" value="Submit" />-->
+           <% end %>
             </div>
             </div>
 	</div>
