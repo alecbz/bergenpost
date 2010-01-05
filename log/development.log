@@ -40619,3 +40619,251 @@ ActionController::RoutingError (No route matches "/images/" with {:method=>:get}
   /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
 
 Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 168.229.28.61 at 2010-01-05 13:57:34) [GET]
+
+ActiveRecord::StatementInvalid (Could not find table 'articles'):
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/acts_as_ferret.rb:244:in `new'
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/acts_as_ferret.rb:244:in `register_class_with_index'
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/act_methods.rb:92:in `acts_as_ferret'
+  app/models/article.rb:4
+  app/controllers/home_controller.rb:3:in `index'
+  /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (26.2ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 168.229.28.61 at 2010-01-05 13:58:03) [GET]
+
+ActiveRecord::StatementInvalid (Could not find table 'articles'):
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/acts_as_ferret.rb:244:in `new'
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/acts_as_ferret.rb:244:in `register_class_with_index'
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/act_methods.rb:92:in `acts_as_ferret'
+  app/models/article.rb:4
+  app/controllers/home_controller.rb:3:in `index'
+  /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (65.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 168.229.28.61 at 2010-01-05 13:58:14) [GET]
+
+ActiveRecord::StatementInvalid (Could not find table 'articles'):
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/acts_as_ferret.rb:244:in `new'
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/acts_as_ferret.rb:244:in `register_class_with_index'
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/act_methods.rb:92:in `acts_as_ferret'
+  app/models/article.rb:4
+  app/controllers/home_controller.rb:3:in `index'
+  /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (25.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 168.229.28.61 at 2010-01-05 13:58:25) [GET]
+
+ActiveRecord::StatementInvalid (Could not find table 'articles'):
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/acts_as_ferret.rb:244:in `new'
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/acts_as_ferret.rb:244:in `register_class_with_index'
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/act_methods.rb:92:in `acts_as_ferret'
+  app/models/article.rb:4
+  app/controllers/home_controller.rb:3:in `index'
+  /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (67.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 168.229.24.30 at 2010-01-05 14:33:07) [GET]
+
+ActiveRecord::StatementInvalid (Could not find table 'articles'):
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/acts_as_ferret.rb:244:in `new'
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/acts_as_ferret.rb:244:in `register_class_with_index'
+  /usr/lib/ruby/gems/1.8/gems/acts_as_ferret-0.4.4/lib/act_methods.rb:92:in `acts_as_ferret'
+  app/models/article.rb:4
+  app/controllers/home_controller.rb:3:in `index'
+  /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (26.3ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAuthors (20091002193931)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "fname" varchar(255), "lname" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091002193931')[0m
+Migrating to CreateArticles (20091018202833)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "author_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091018202833')[0m
+Migrating to CreateComments (20091020183036)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "body" text, "article_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091020183036')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("authors")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("comments")[0m
+
+
+Processing HomeController#index (for 168.229.24.30 at 2010-01-05 14:33:56) [GET]
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 56ms (View: 50, DB: 0) | 200 OK [http://umbraserv.no-ip.org/bergenpost/]
+
+
+Processing ApplicationController#index (for 168.229.24.30 at 2010-01-05 14:33:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
