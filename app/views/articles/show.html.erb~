@@ -48,7 +48,11 @@
 			  <small>Subtitle Here</small>				</div>
           </div>
             <div id="search">
-            <input name="Search" type="text" value="Search" size="15" maxlength="35" /><input name="Submit" type="button" value="Enter" />
+            <% form_tag({:controller => 'searches', :action => 'index'}, :method => 'get') do %>
+            <%= text_field_tag "q", params[:q] %>
+            <%= submit_tag "Enter" %>
+            <% end %>
+            <!--<input name="Search" type="text" value="Search" size="15" maxlength="35" /><input name="Submit" type="button" value="Enter" />-->
           </div>
 <div id="block_columns">  
         <div class="block_content_left">
@@ -110,6 +114,7 @@
               <%= comment_form.label :name, "Name:" %><%= comment_form.text_field :name %><!--<input name="name" type="text" size="15" maxlength="45" />--></p>
               <%= comment_form.label :body, "Comment:" %> <!--Comment:-->
            <%= comment_form.text_area :body, :cols => 50, :rows => 5 %> <!--<textarea name="comment" cols="50" rows="5"></textarea>-->
+           <% end %>
            <% end %>
            <%= article_form.submit "Submit" %> <!--<input name="submit" type="button" value="Submit" />-->
            <% end %>

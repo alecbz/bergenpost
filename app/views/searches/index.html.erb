@@ -28,19 +28,18 @@
             <div id="search">
             <% form_tag({:controller => 'searches', :action => 'index'}, :method => 'get') do %>
             <%= text_field_tag "q", params[:q] %>
-            <%= submit_tag "Enter" %>
+            <%= submit_tag "Search" %>
             <% end %>
             <!--<input name="Search" type="text" value="Search" size="15" maxlength="35" /><input name="Submit" type="button" value="Enter" />-->
           </div>
 <div id="block_columns">
-  <% @latest_articles.each do |a| %>
-       <div class="block_content_left">
+<div class="block_content_left">
             	 <div class="block_inside">
-            	   	<h3><%= link_to a.title, a %></h3><p>
-            	    <%= a.body %>
-                  </p></div>
-        </div>
-  <% end %>
+<% @results.each do |article| %>
+<%= link_to article.title, article %>
+<br />
+<% end %>
+</div></div>
 		</div>
 	</div>
 </div>

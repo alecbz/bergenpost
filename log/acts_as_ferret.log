@@ -605,3 +605,332 @@ using index in /home/alec/bergenpost/index/development/article
 [article] refusing re-registration of class Article
 [article] register class Article with index article
 [article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :updated_at, :body, :author_id, :created_at]
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:author_id, :updated_at, :created_at, :body, :title]
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: jk
+-->+(author_id:jk updated_at:jk created_at:jk body:jk title:jk) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 2, title: "Breaking news", body: "jk, not really", author_id: 1, created_at: "2010-01-03 21:56:56", updated_at: "2010-01-03 21:56:56">]
+Query: jk
+total hits: 2, results delivered: 1
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :updated_at, :body, :created_at, :author_id]
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: suite
+-->+(author_id:suite updated_at:suite created_at:suite body:suite title:suite) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 0 results from AR: []
+Query: suite
+total hits: 0, results delivered: 0
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: jesus
+-->+(author_id:jesus updated_at:jesus created_at:jesus body:jesus title:jesus) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 3, title: "I had an out of body experience...", body: "...the other day her name was jesus.", author_id: 1, created_at: "2010-01-04 23:39:36", updated_at: "2010-01-04 23:39:56">]
+Query: jesus
+total hits: 1, results delivered: 1
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:author_id, :title, :updated_at, :body, :created_at]
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:author_id, :updated_at, :created_at, :body, :title]
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: omgomgomg
+-->+(author_id:omgomgomg updated_at:omgomgomg created_at:omgomgomg body:omgomgomg title:omgomgomg) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 0 results from AR: []
+Query: omgomgomg
+total hits: 0, results delivered: 0
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:limit=>nil, :offset=>nil}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: article
+-->+(author_id:article updated_at:article created_at:article body:article title:article) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 4, title: "A fourth article", body: "This article exists.", author_id: 1, created_at: "2010-01-05 00:27:09", updated_at: "2010-01-05 00:27:09">]
+Query: article
+total hits: 1, results delivered: 1
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :updated_at, :body, :created_at, :author_id]
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :author_id, :updated_at, :body, :created_at]
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :updated_at, :body, :created_at, :author_id]
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :updated_at, :body, :created_at, :author_id]
+Will use local index.
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:author_id, :title, :updated_at, :body, :created_at]
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:author_id, :title, :updated_at, :body, :created_at]
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:page=>nil, :offset=>0, :limit=>:all}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: jk
+-->+(author_id:jk title:jk updated_at:jk body:jk created_at:jk) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 2, title: "Breaking news", body: "jk, not really", author_id: 1, created_at: "2010-01-03 21:56:56", updated_at: "2010-01-03 21:56:56">]
+Query: jk
+total hits: 2, results delivered: 1
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:page=>nil, :offset=>0, :limit=>:all}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: fourth
+-->+(author_id:fourth title:fourth updated_at:fourth body:fourth created_at:fourth) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 4, title: "A fourth article", body: "This article exists.", author_id: 1, created_at: "2010-01-05 00:27:09", updated_at: "2010-01-05 00:27:09">]
+Query: fourth
+total hits: 1, results delivered: 1
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:page=>nil, :offset=>0, :limit=>:all}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: fourth
+-->+(author_id:fourth title:fourth updated_at:fourth body:fourth created_at:fourth) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 2 results from AR: [#<Article id: 5, title: "omg so cool", body: "this article has the word 'fourth' in it", author_id: 1, created_at: "2010-01-05 05:13:49", updated_at: "2010-01-05 05:13:49">, #<Article id: 4, title: "A fourth article", body: "This article exists.", author_id: 1, created_at: "2010-01-05 00:27:09", updated_at: "2010-01-05 00:27:09">]
+Query: fourth
+total hits: 2, results delivered: 2
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:page=>nil, :offset=>0, :limit=>:all}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: fourth
+-->+(author_id:fourth title:fourth updated_at:fourth body:fourth created_at:fourth) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 2 results from AR: [#<Article id: 5, title: "omg so cool", body: "this article has the word 'fourth' in it", author_id: 1, created_at: "2010-01-05 05:13:49", updated_at: "2010-01-05 05:13:49">, #<Article id: 4, title: "A fourth article", body: "This article exists.", author_id: 1, created_at: "2010-01-05 00:27:09", updated_at: "2010-01-05 00:27:09">]
+Query: fourth
+total hits: 2, results delivered: 2
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:page=>nil, :offset=>0, :limit=>:all}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: fourth
+-->+(author_id:fourth title:fourth updated_at:fourth body:fourth created_at:fourth) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 2 results from AR: [#<Article id: 5, title: "omg so cool", body: "this article has the word 'fourth' in it", author_id: 1, created_at: "2010-01-05 05:13:49", updated_at: "2010-01-05 05:13:49">, #<Article id: 4, title: "A fourth article", body: "This article exists.", author_id: 1, created_at: "2010-01-05 00:27:09", updated_at: "2010-01-05 00:27:09">]
+Query: fourth
+total hits: 2, results delivered: 2
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:page=>nil, :offset=>0, :limit=>:all}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: fourth
+-->+(author_id:fourth title:fourth updated_at:fourth body:fourth created_at:fourth) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 2 results from AR: [#<Article id: 5, title: "omg so cool", body: "this article has the word 'fourth' in it", author_id: 1, created_at: "2010-01-05 05:13:49", updated_at: "2010-01-05 05:13:49">, #<Article id: 4, title: "A fourth article", body: "This article exists.", author_id: 1, created_at: "2010-01-05 00:27:09", updated_at: "2010-01-05 00:27:09">]
+Query: fourth
+total hits: 2, results delivered: 2
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:page=>nil, :offset=>0, :limit=>:all}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: fourth
+-->+(author_id:fourth title:fourth updated_at:fourth body:fourth created_at:fourth) +(class_name:Article)
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :updated_at, :body, :author_id, :created_at]
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:page=>nil, :offset=>0, :limit=>:all}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: fourth
+-->+(title:fourth updated_at:fourth body:fourth author_id:fourth created_at:fourth) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 2 results from AR: [#<Article id: 5, title: "omg so cool", body: "this article has the word 'fourth' in it", author_id: 1, created_at: "2010-01-05 05:13:49", updated_at: "2010-01-05 05:13:49">, #<Article id: 4, title: "A fourth article", body: "This article exists.", author_id: 1, created_at: "2010-01-05 00:27:09", updated_at: "2010-01-05 00:27:09">]
+Query: fourth
+total hits: 2, results delivered: 2
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:author_id, :title, :updated_at, :body, :created_at]
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :updated_at, :body, :author_id, :created_at]
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :updated_at, :body, :author_id, :created_at]
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:page=>nil, :offset=>0, :limit=>:all}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: fourth
+-->+(title:fourth updated_at:fourth body:fourth author_id:fourth created_at:fourth) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 2 results from AR: [#<Article id: 5, title: "omg so cool", body: "this article has the word 'fourth' in it", author_id: 1, created_at: "2010-01-05 05:13:49", updated_at: "2010-01-05 05:13:49">, #<Article id: 4, title: "A fourth article", body: "This article exists.", author_id: 1, created_at: "2010-01-05 00:27:09", updated_at: "2010-01-05 00:27:09">]
+Query: fourth
+total hits: 2, results delivered: 2
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :updated_at, :body, :author_id, :created_at]
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:page=>nil, :offset=>0, :limit=>:all}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: fourth
+-->+(title:fourth updated_at:fourth body:fourth author_id:fourth created_at:fourth) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 2 results from AR: [#<Article id: 5, title: "omg so cool", body: "this article has the word 'fourth' in it", author_id: 1, created_at: "2010-01-05 05:13:49", updated_at: "2010-01-05 05:13:49">, #<Article id: 4, title: "A fourth article", body: "This article exists.", author_id: 1, created_at: "2010-01-05 00:27:09", updated_at: "2010-01-05 00:27:09">]
+Query: fourth
+total hits: 2, results delivered: 2
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :updated_at, :body, :created_at, :author_id]
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:author_id, :title, :updated_at, :body, :created_at]
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:author_id, :title, :updated_at, :body, :created_at]
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
