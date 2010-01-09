@@ -1,6 +1,8 @@
 require 'date'
 
 class ArticlesController < ApplicationController
+  require_role "admin", :for_all_except => [:index, :show]
+
   # GET /articles
   # GET /articles.xml
   def index
