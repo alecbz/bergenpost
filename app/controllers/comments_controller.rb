@@ -47,4 +47,5 @@ class CommentsContoller < ApplicationController
   end
   
   def update
-    
+   end
+end
