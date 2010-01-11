@@ -32,7 +32,8 @@ class CommentsContoller < ApplicationController
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(params[:comment])
-    @comment.time_posted = Date.now
+    @comment.name = "Anonymous" if @comment.name.empty? or @comment.name.nil? #isnt working
+    #@comment.time_posted = Date.now
 
     respond_to do |format|
       if @comment.save
@@ -45,7 +46,4 @@ class CommentsContoller < ApplicationController
       end
     end
   end
-  
-  def update
-   end
 end
