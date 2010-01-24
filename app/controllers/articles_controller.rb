@@ -1,7 +1,8 @@
 require 'date'
 
 class ArticlesController < ApplicationController
-  require_role "admin", :for_all_except => [:index, :show]
+  #require_role "admin", :for_all_except => [:index, :show]
+  before_filter :authenticate, :except => [:index, :show]
 
   # GET /articles
   # GET /articles.xml
@@ -105,4 +106,13 @@ class ArticlesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  private
+  
+  def authenticate  
+    authenticate_or_request_with_http_basic do |name, password|
+      name == "admin" and password == "nottellingyousucka"
+    end
+  end
+  
 end

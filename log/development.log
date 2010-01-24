@@ -47393,3 +47393,2422 @@ ActionController::UnknownAction (No action responded to images. Actions: access_
   /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
 
 Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for ::1 at 2010-01-11 18:40:54) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 28ms (View: 17, DB: 1) | 200 OK [http://localhost/bergenpost/]
+
+
+Processing ApplicationController#index (for ::1 at 2010-01-11 18:40:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#new (for ::1 at 2010-01-11 18:40:58) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 ) [0m
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/articles
+Rendering articles/new
+Rendered articles/_form (4.8ms)
+Completed in 35ms (View: 14, DB: 1) | 200 OK [http://localhost/bergenpost/articles/new]
+
+
+Processing ArticlesController#create (for ::1 at 2010-01-11 18:41:05) [POST]
+  Parameters: {"article"=>{"body"=>"omgomgomg", "title"=>"hehe"}, "commit"=>"Save", "author"=>{"id"=>"1"}, "authenticity_token"=>"ihITfBhiqsVzIoxNqIOpEKIAz/PmxNGsG2NiX0uWt4s="}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 ) [0m
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mArticle Create (0.3ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "author_id") VALUES('2010-01-11 23:41:05', 'hehe', 'omgomgomg', '2010-01-11 23:41:05', 1)[0m
+ferret_create/update: Article-3
+creating doc for class: Article-3
+Adding field title with value 'hehe' to index
+Adding field body with value 'omgomgomg' to index
+Redirected to http://localhost/bergenpost/articles/3
+Completed in 64ms (DB: 1) | 302 Found [http://localhost/bergenpost/articles]
+
+
+Processing ArticlesController#show (for ::1 at 2010-01-11 18:41:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 62ms (View: 49, DB: 1) | 200 OK [http://localhost/bergenpost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for ::1 at 2010-01-11 18:41:05) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 ) [0m
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for ::1 at 2010-01-11 18:41:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for ::1 at 2010-01-11 18:41:07) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 80ms (View: 69, DB: 1) | 200 OK [http://localhost/bergenpost/]
+
+
+Processing ApplicationController#index (for ::1 at 2010-01-11 18:41:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 168.229.28.61 at 2010-01-13 13:15:15) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 57ms (View: 46, DB: 1) | 200 OK [http://umbraserv.no-ip.org/bergenpost]
+
+
+Processing HomeController#index (for 168.229.28.61 at 2010-01-15 08:12:59) [GET]
+  [4;36;1mArticle Load (1.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 72ms (View: 39, DB: 1) | 200 OK [http://umbraserv.no-ip.org/bergenpost]
+
+
+Processing HomeController#index (for 168.229.28.61 at 2010-01-15 13:15:17) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 27ms (View: 16, DB: 1) | 200 OK [http://umbraserv.no-ip.org/bergenpost]
+
+
+Processing HomeController#index (for 168.229.28.61 at 2010-01-15 14:19:06) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 27ms (View: 16, DB: 1) | 200 OK [http://umbraserv.no-ip.org/bergenpost]
+
+
+Processing HomeController#index (for 168.229.28.61 at 2010-01-19 13:49:19) [GET]
+  [4;36;1mArticle Load (1.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 72ms (View: 39, DB: 1) | 200 OK [http://umbraserv.no-ip.org/bergenpost]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 12:03:57) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 102ms (View: 51, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:03:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:04:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
+Completed in 198ms (View: 165, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:04:05) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:04:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-01-24 12:04:27) [PUT]
+  Parameters: {"article"=>{"comments_attributes"=>{"0"=>{"name"=>"<b>My name!<\\b>", "body"=>"O hai! <i>lol</i>"}}}, "commit"=>"Submit", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "id"=>"2"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 40ms (DB: 0) | 302 Found [http://localhost/articles/2]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-24 12:04:27) [GET]
+Rendering sessions/new
+Completed in 23ms (View: 21, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:04:36) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"darthvader"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:04:36 UTC 2010
+Rendering sessions/new
+Completed in 39ms (View: 3, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:04:41) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"lollol"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:04:41 UTC 2010
+Rendering sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 26ms (View: 18, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:30) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-01-24 12:06:34) [PUT]
+  Parameters: {"article"=>{"comments_attributes"=>{"6"=>{"name"=>"cv", "body"=>"cv"}, "0"=>{"id"=>"1"}, "1"=>{"id"=>"2"}, "2"=>{"id"=>"3"}, "3"=>{"id"=>"4"}, "4"=>{"id"=>"5"}, "5"=>{"id"=>"6"}}}, "commit"=>"Submit", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "id"=>"1"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/articles/1]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-24 12:06:34) [GET]
+Rendering sessions/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:39) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:39) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:39) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:40) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:40) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 62ms (View: 14, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:41) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (4.7ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 61ms (View: 48, DB: 5) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:41) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:42) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:42) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:42) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:42) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:42) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:43) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:43) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 64ms (View: 16, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:44) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
+Completed in 63ms (View: 55, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:45) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:06:45) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:06:45) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 2ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:06:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 ) [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:20:07) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 110ms (View: 97, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:20:07) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:20:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:20:08) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:20:08) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:20:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:20:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:20:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:20:09) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:20:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:20:10) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 406 Not Acceptable [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:20:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-01-24 12:20:21) [PUT]
+  Parameters: {"article"=>{"comments_attributes"=>{"6"=>{"name"=>"alec", "body"=>"fukitol"}, "0"=>{"id"=>"1"}, "1"=>{"id"=>"2"}, "2"=>{"id"=>"3"}, "3"=>{"id"=>"4"}, "4"=>{"id"=>"5"}, "5"=>{"id"=>"6"}}}, "commit"=>"Submit", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "id"=>"1"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/articles/1]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-24 12:20:21) [GET]
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:23) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"darthvader"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:23 UTC 2010
+Rendering sessions/new
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:24) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>""}
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:24 UTC 2010
+Rendering sessions/new
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:25) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"darthvader"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:25 UTC 2010
+Rendering sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:25) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>""}
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:25 UTC 2010
+Rendering sessions/new
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:26) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"darthvader"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:26 UTC 2010
+Rendering sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:28) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>""}
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:28 UTC 2010
+Rendering sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:28) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"darthvader"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:28 UTC 2010
+Rendering sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:32) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"lollol"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:32 UTC 2010
+Rendering sessions/new
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:33) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>""}
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:33 UTC 2010
+Rendering sessions/new
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:33) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"darthvader"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:33 UTC 2010
+Rendering sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:39) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"nottellingyousucka"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:39 UTC 2010
+Rendering sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:40) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>""}
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:40 UTC 2010
+Rendering sessions/new
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:40) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"darthvader"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:40 UTC 2010
+Rendering sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:40) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>""}
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:40 UTC 2010
+Rendering sessions/new
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:40) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"darthvader"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:40 UTC 2010
+Rendering sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:41) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>""}
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:41 UTC 2010
+Rendering sessions/new
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:41) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"darthvader"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:41 UTC 2010
+Rendering sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:41) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>""}
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:41 UTC 2010
+Rendering sessions/new
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:41) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>"darthvader"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:41 UTC 2010
+Rendering sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-24 12:20:41) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "login"=>"admin", "password"=>""}
+Failed login for 'admin' from 127.0.0.1 at Sun Jan 24 17:20:41 UTC 2010
+Rendering sessions/new
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-01-24 12:20:51) [GET]
+Rendering users/new
+Completed in 23ms (View: 16, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-01-24 12:21:01) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "user"=>{"password_confirmation"=>"admin", "password"=>"admin", "login"=>"root", "email"=>"alecbenzer@gmail.com"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'root') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'alecbenzer@gmail.com') LIMIT 1[0m
+Rendering users/new
+Completed in 55ms (View: 6, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-01-24 12:21:12) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"lPGxxDezyyO1drlmwr7uaaJRBBPet1V06I9HoK5PM/U=", "user"=>{"password_confirmation"=>"adminadmin", "password"=>"adminadmin", "login"=>"root", "email"=>"alecbenzer@gmail.com"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'root') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'alecbenzer@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "remember_token", "login", "email") VALUES('', 'd1e8351758c5e492475cca04a8af17ead1564d95', '2010-01-24 17:21:12', 'cd5b487cec5f4abb472d04d05bd434355416819f', NULL, '2010-01-24 17:21:12', NULL, 'root', 'alecbenzer@gmail.com')[0m
+Redirected to http://localhost:3000/articles/1
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/users]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 12:21:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 28ms (View: 15, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 12:21:12) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 2 ) [0m
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 10ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 12:21:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAuthors (20091002193931)
+Migrating to CreateArticles (20091018202833)
+Migrating to CreateComments (20091020183036)
+Migrating to CreateUsers (20100109183817)
+Migrating to CreateRoles (20100109185134)
+Migrating to DeleteUserAndRoleTables (20100124203130)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "roles"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "roles_users"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100124203130')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("authors")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 15:34:53) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 106ms (View: 51, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:34:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-01-24 15:34:55) [GET]
+  Parameters: {"id"=>"3"}
+
+NameError (undefined local variable or method `authenticate' for ArticlesController:Class):
+  app/controllers/articles_controller.rb:5
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.5ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:35:24) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 190ms (View: 182, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:35:24) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:35:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:35:28) [GET]
+  Parameters: {"id"=>"signup"}
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=signup):
+  app/controllers/articles_controller.rb:21:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-01-24 15:35:31) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 30ms (View: 24, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 15:36:06) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:09) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:11) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:12) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:14) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:14) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:17) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=4):
+  app/controllers/articles_controller.rb:21:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (21.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:21) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:21) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:21) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:21) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:22) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:22) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (1.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:23) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:23) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:23) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 59ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:23) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:23) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 59ms (View: 52, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:24) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2010-01-24 15:36:36) [PUT]
+  Parameters: {"article"=>{"comments_attributes"=>{"0"=>{"name"=>"My name is john", "body"=>"o hai"}}}, "commit"=>"Submit", "authenticity_token"=>"ZsifAqnY8D5QzTT8nspEruxo3D2+VGN9WWZqQ4tua4s=", "id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("name", "created_at", "body", "updated_at", "article_id") VALUES('My name is john', '2010-01-24 20:36:36', 'o hai', '2010-01-24 20:36:36', 3)[0m
+ferret_create/update: Article-3
+creating doc for class: Article-3
+Adding field body with value 'omgomgomg' to index
+Adding field title with value 'hehe' to index
+Redirected to http://localhost:3000/articles/3
+Completed in 185ms (DB: 0) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:36:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:36:36) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:36:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:39:40) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:39:40) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:39:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 15:39:49) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:39:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:39:50) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:39:50) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:39:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:40:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
+Completed in 59ms (View: 14, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:40:09) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:40:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:40:19) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:40:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 2) [0m
+Completed in 64ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:40:40) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/articles/images/story_thumbnail.jpg]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:40:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:40:47) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-01-24 15:41:19) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:41:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 60ms (View: 52, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:41:21) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:41:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-24 15:41:36) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering home/index
+Completed in 61ms (View: 51, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:41:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:41:40) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 3) [0m
+Completed in 106ms (View: 99, DB: 1) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:41:40) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:41:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-01-24 15:41:43) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:41:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:41:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:41:44) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2010-01-24 15:41:47) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/articles/]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-01-24 15:41:50) [GET]
+  Parameters: {"id"=>"1"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/articles/1/edit]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2010-01-24 15:41:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Rendered articles/_form (12.3ms)
+Completed in 39ms (View: 32, DB: 0) | 200 OK [http://localhost/articles/1/edit]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-01-24 15:41:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#images to jpg (for 127.0.0.1 at 2010-01-24 15:41:57) [GET]
+  Parameters: {"id"=>"story_thumbnail"}
+
+ActionController::UnknownAction (No action responded to images. Actions: access_denied, check_roles, create, destroy, edit, index, new, render_optional_error_file, role_requirements, role_requirements=, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-24 15:41:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)

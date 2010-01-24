@@ -100,8 +100,8 @@
         	<div class="block_inside">
             <h3>Comments</h3>
             <% @article.comments.each do |comment| %>
-            <h6><%= comment.name %> (<%= comment.created_at %>)</h6>
-            <p><%= comment.body %></p>
+            <h6><%= h comment.name %> (<%= comment.created_at %>)</h6>
+            <p><%= h comment.body %></p>
                             ------------------------------------
             <% end %>
             <!--<h6>Eamon Fay (time/date)</h6>
