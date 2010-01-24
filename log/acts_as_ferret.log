@@ -2084,3 +2084,27 @@ Will use local index.
 [article] refusing re-registration of class Article
 [article] register class Article with index article
 [article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime)]
+options: {:limit=>:all, :page=>nil, :offset=>0}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: df
+-->+(body:df title:df) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 4, title: "df", body: "dfd", author_id: 1, created_at: "2010-01-24 21:19:48", updated_at: "2010-01-24 21:19:48">]
+Query: df
+total hits: 1, results delivered: 1
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+Will use local index.
+Will use local index.
