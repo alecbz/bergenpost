@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
-  require_role "admin", :for_all_except => [:index, :show]
+  before_filter :authenticate, :except => [:show]]
 
   # GET /authors
   # GET /authors.xml
@@ -82,6 +82,14 @@ class AuthorsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(authors_url) }
       format.xml  { head :ok }
+    end
+  end
+  
+  private
+  
+  def authenticate  
+    authenticate_or_request_with_http_basic do |name, password|
+      name == "admin" && password == "omgomg"
     end
   end
 end
