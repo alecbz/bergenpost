@@ -21,12 +21,12 @@ class ArticlesController < ApplicationController
     begin
       @prev = Article.find((params[:id].to_i-1).to_s)
     rescue
-      @prev = nil
+      @prev = @article
     end
     begin
       @next = Article.find((params[:id].to_i+1).to_s)
     rescue
-      @next = nil
+      @next = @article
     end
     
     unless params[:comment].nil? or params[:comment].empty?
