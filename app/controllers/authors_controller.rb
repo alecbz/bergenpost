@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
-  before_filter :authenticate, :except => [:show]]
+  before_filter :authenticate, :except => [:show]
 
   # GET /authors
   # GET /authors.xml
