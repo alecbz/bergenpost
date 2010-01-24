@@ -28,7 +28,7 @@
             <div id="search">
             <% form_tag({:controller => 'searches', :action => 'index'}, :method => 'get') do %>
             <%= text_field_tag "q", params[:q] %>
-            <%= submit_tag "Enter" %>
+            <%= submit_tag "Search" %>
             <% end %>
             <!--<input name="Search" type="text" value="Search" size="15" maxlength="35" /><input name="Submit" type="button" value="Enter" />-->
           </div>

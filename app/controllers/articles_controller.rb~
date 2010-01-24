@@ -111,7 +111,7 @@ class ArticlesController < ApplicationController
   
   def authenticate  
     authenticate_or_request_with_http_basic do |name, password|
-      password == "nottellingyousucka"
+      name == "admin" and password == "nottellingyousucka"
     end
   end
   

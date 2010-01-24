@@ -7,8 +7,8 @@ ActionController::Routing::Routes.draw do |map|
 
   # map.resource :session
 
-  map.resources :articles
-  map.resources :news
+  map.resources :articles, :has_many => :comments
+  # map.resources :news
   map.resources :authors
   
   map.root({:controller => "home"})
