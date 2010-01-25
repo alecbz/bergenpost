@@ -1,3 +1,11 @@
+<%= javascript_include_tag "tiny_mce/tiny_mce" %>
+<script language="javascript" type="text/javascript">
+        tinyMCE.init({
+            mode : "textareas",
+            theme : "advanced"
+        });
+</script>
+
 <% form_for(@article) do |f| %>
   <%= f.error_messages %>
 
