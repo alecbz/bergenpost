@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Bergen Post</title>
+    <link href="/stylesheets/homestyle.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div id="main">
+      <div class="container">
+        <div id="header">  
+				  <ul id="menu">
+   	  		  <li><a href="#">Popular </a></li>
+         		<li><a href="#">Recent </a></li>
+            <li><a href="#">Academies</a></li>
+       			<li><a href="#">Teachers</a></li>
+	          <li><a href="#">Letters</a></li>
+            <li><a href="#">Reader Central</a></li>
+            <li><a href="#">Anti-Gossip</a></li>
+   			  </ul>
+          <a href="/">
+            <div id="logo">
+     			    <h1>Bergen Post</h1>
+     		      <small>Subtitle Here</small>
+     		    </div>
+     		  </a>
+        </div>
+        <div id="search">
+          <% form_tag({:controller => 'searches', :action => 'index'}, :method => 'get') do %>
+            <%= text_field_tag "q", params[:q] %>
+            <%= submit_tag "Search" %>
+          <% end %>
+        </div>
+        <div id="block_columns">
+          <%= yield %>
+		    </div>
+	    </div>
+    </div>
+	  <div id="footer">
+      <div class="footer_column long">  
+        <h3>Site by eamon fay, Design by Jorge Soto</h3>  
+        <p>The Bergen Post is a website that blah blah put your information here or send it to me and I will                  add it to the site.  If you need anything else to be managed then just ask this is just filler,                  tons and tons of filler because it is needed for no reason.</p>  
+      </div>  
+      <div class="footer_column">  
+        <h3>More Links</h3>  
+        <ul>  
+          <li><a href="#">Links!</a></li>  
+          <li><a href="#">Links!</a></li>  
+          <li><a href="#">Links!</a></li>  
+          <li><a href="#">Links!</a></li>  
+          <li><a href="#">Links!</a></li>  
+        </ul>  
+      </div>     
+      <div class="footer_column">  
+        <h3>RSS</h3>  
+        <ul>  
+          <li><a href="">RSS Feed</a></li>  
+          <li><a href="">What is RSS?</a></li>  
+        </ul>  
+      </div>  
+    </div>
+  </body>
+</html>

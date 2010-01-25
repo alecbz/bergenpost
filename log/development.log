@@ -58518,3 +58518,235 @@ ActionController::RoutingError (No route matches "/images/" with {:method=>:get}
   /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 168.229.26.25 at 2010-01-25 12:59:25) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/home
+Rendering home/index
+Completed in 107ms (View: 60, DB: 1) | 200 OK [http://umbraserv.no-ip.org/]
+
+
+Processing ApplicationController#index (for 168.229.26.25 at 2010-01-25 12:59:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAuthors (20091002193931)
+Migrating to CreateArticles (20091018202833)
+Migrating to CreateComments (20091020183036)
+Migrating to DeleteUserAndRoleTables (20100124203130)
+Migrating to CreateCategories (20100125180117)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100125180117')[0m
+Migrating to AddCategoryToArticles (20100125180216)
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: near "references": syntax error: ALTER TABLE "articles" ADD "category" references[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAuthors (20091002193931)
+Migrating to CreateArticles (20091018202833)
+Migrating to CreateComments (20091020183036)
+Migrating to DeleteUserAndRoleTables (20100124203130)
+Migrating to CreateCategories (20100125180117)
+Migrating to AddCategoryToArticles (20100125180713)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: near "references": syntax error: ALTER TABLE "articles" ADD "category" references[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAuthors (20091002193931)
+Migrating to CreateArticles (20091018202833)
+Migrating to CreateComments (20091020183036)
+Migrating to DeleteUserAndRoleTables (20100124203130)
+Migrating to CreateCategories (20100125180117)
+Migrating to AddCategoryToArticles (20100125180713)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "articles" ADD "category_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100125180713')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("authors")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("comments")[0m
+
+
+Processing HomeController#index (for 168.229.26.25 at 2010-01-25 13:18:24) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/home
+Rendering home/index
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://umbraserv.no-ip.org/]
+
+
+Processing ApplicationController#index (for 168.229.26.25 at 2010-01-25 13:19:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 168.229.26.25 at 2010-01-25 13:19:15) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/home
+Rendering home/index
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://umbraserv.no-ip.org/]
+
+
+Processing ApplicationController#index (for 168.229.26.25 at 2010-01-25 13:19:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 168.229.26.25 at 2010-01-25 13:20:34) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 3ms (View: 3, DB: 0) | 401 Unauthorized [http://umbraserv.no-ip.org/articles]
+
+
+Processing ArticlesController#new (for 168.229.26.25 at 2010-01-25 13:20:44) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://umbraserv.no-ip.org/articles/new]
+
+
+Processing ArticlesController#new (for 168.229.26.25 at 2010-01-25 13:21:02) [GET]
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" [0m
+  [4;36;1mCategory Load (0.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/new
+Rendered articles/_form (29.7ms)
+Completed in 70ms (View: 43, DB: 0) | 200 OK [http://umbraserv.no-ip.org/articles/new]
+
+
+Processing ApplicationController#index (for 168.229.26.25 at 2010-01-25 13:21:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mCategory Create (0.2ms)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES('academies', '2010-01-25 18:23:29', '2010-01-25 18:23:29')[0m
+  [4;35;1mCategory Create (0.1ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES('teachers', '2010-01-25 18:23:29', '2010-01-25 18:23:29')[0m
+  [4;36;1mCategory Create (0.1ms)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES('letters', '2010-01-25 18:23:29', '2010-01-25 18:23:29')[0m
+  [4;35;1mCategory Create (0.1ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES('reader-central', '2010-01-25 18:23:29', '2010-01-25 18:23:29')[0m
+  [4;36;1mCategory Create (0.2ms)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES('anti-gossip', '2010-01-25 18:23:29', '2010-01-25 18:23:29')[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ArticlesController#new (for 168.229.26.25 at 2010-01-25 13:24:02) [GET]
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/new
+
+ActionView::TemplateError (undefined local variable or method `a' for #<ActionView::Base:0x7f21baae0a28>) on line #18 of app/views/articles/_form.html.erb:
+15:   </p>
+16:   <p>
+17:     <%= f.label :category %><br />
+18:     <%= select("category", "id", @categories.map {|c| [a.name,a.id]}) %>
+19:   </p>
+20:   <p>
+21:     <%= f.submit "Save" %>
+
+    app/views/articles/_form.html.erb:18
+    app/views/articles/_form.html.erb:18:in `map'
+    app/views/articles/_form.html.erb:18
+    app/views/articles/_form.html.erb:1
+    app/views/articles/new.html.erb:6
+    app/controllers/articles_controller.rb:51:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.9ms)
+Rendered rescues/_request_and_response (43.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 168.229.26.25 at 2010-01-25 13:24:57) [GET]
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/new
+Rendered articles/_form (6.0ms)
+Completed in 22ms (View: 9, DB: 0) | 200 OK [http://umbraserv.no-ip.org/articles/new]
+
+
+Processing ApplicationController#index (for 168.229.26.25 at 2010-01-25 13:25:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)

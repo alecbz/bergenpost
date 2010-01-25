@@ -46,6 +46,7 @@ class ArticlesController < ApplicationController
   def new
     @article = Article.new
     @authors = Author.find(:all)
+    @categories = Category.find(:all)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -57,14 +58,15 @@ class ArticlesController < ApplicationController
   def edit
     @article = Article.find(params[:id])
     @authors = Author.find(:all)
+    @categories = Category.find(:all)
   end
 
   # POST /articles
   # POST /articles.xml
   def create
     @article = Article.new(params[:article])
-    #@article.time_posted = DateTime.now
     @article.author = Author.find(params[:author][:id])
+    @article.category = Category.find(params[:category][:id])
 
     respond_to do |format|
       if @article.save

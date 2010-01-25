@@ -14,6 +14,10 @@
     <%= select("author", "id", @authors.map {|a| [a.fname + " " + a.lname,a.id]}) %>
   </p>
   <p>
+    <%= f.label :category %><br />
+    <%= select("category", "id", @categories.map {|c| [c.name,c.id]}) %>
+  </p>
+  <p>
     <%= f.submit "Save" %>
   </p>
 <% end %>
