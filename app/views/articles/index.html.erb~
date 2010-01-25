@@ -1,3 +1,5 @@
+<div class="block_content_left">
+  <div class="block_inside">
 <h1>Listing articles</h1>
 
 <table>
@@ -11,10 +13,7 @@
 <% for article in @articles %>
   <tr>
     <td><%=link_to(h(article.title),article) %></td>
-    <!--<td><%=h article.body %></td>-->
-    <!--<td><%=h article.time_posted %></td>-->
     <td><%=link_to(h(article.author),article.author)%></td>
-    <!--<td><%= link_to 'Show', article %></td>-->
     <td><%= link_to 'Edit', edit_article_path(article) %></td>
     <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

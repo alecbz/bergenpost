@@ -1,146 +1,57 @@
-<!--<p>
-  <b>Title:</b>
-  <%=h @article.title %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%=h @article.body %>
-</p>
-
-<p>
-  <b>Time posted:</b>
-  <%=h @article.created_at %>
-</p>
-
-<p>
-  <b>Author:</b>
-  <%=h @article.author %>
-</p>
-
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>-->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><%= @article.title %> - Bergen Post</title>
-<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-    <div id="main">
-    	<div class="container">
-        	<div id="header">  
-				<ul id="menu">
-   	  			  <li><a href="#">Popular </a></li>
-         		  <li><a href="#">Recent </a></li>
-          		  <li><a href="#">Academies</a></li>
-       			  <li><a href="#">Teachers</a></li>
-	              <li><a href="#">Letters</a></li>
-                  <li><a href="#">Dear Gupternan</a></li>
-                  <li><a href="#">Anti-Gossip</a></li>
-
-   			  </ul>
-<div id="logo">
-<h1>Bergen Post </h1>
-			  <small>Subtitle Here</small>				</div>
-          </div>
-            <div id="search">
-            <% form_tag({:controller => 'searches', :action => 'index'}, :method => 'get') do %>
-            <%= text_field_tag "q", params[:q] %>
-            <%= submit_tag "Search" %>
-            <% end %>
-            <!--<input name="Search" type="text" value="Search" size="15" maxlength="35" /><input name="Submit" type="button" value="Enter" />-->
-          </div>
-<div id="block_columns">  
-        <div class="block_content_left">
-       	  <div class="block_inside">
-            	   	<h3><%= @article.title %></h3>
-            	    <p><%= @article.body %></p>
-            	    <p>&nbsp;</p>
-            	    <p>
-            	    <%= link_to "Previous Article", @prev %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            	    <%= link_to "Next Article", @next %>
-
-          </div>                         
-        </div>
-        
-        <div class="block_content_right">
-       	  <div class="block_inside"> 
-                    <!--<img src="images/story_thumbnail.jpg" class="thumbnail" alt="Pic Here"  />-->
-            	   	<h3>Archives</h3>
-            	    <h5><p>2009</p></h5>
-                    <ul id="archives">
-                    <li>January</li>
-                    <li>February</li>
-                    <li>March</li>
-                    <li>April</li>
-                    <li>May</li>
-                    <li>June</li>
-                    <li>July</li>
-                    <li>August</li>
-                    <li>September</li>
-                    <li>October</li>
-                    <li>November</li>
-                    <li>December</li>
-                    </ul>
-   	    	    </div>
-		</div>
-        <div class="comments">
-        	<div class="block_inside">
-            <h3>Comments</h3>
-            <% @article.comments.each do |comment| %>
-            <h6><%= h comment.name %> (<%= time_ago_in_words comment.created_at %> ago)</h6>
-            <p><%= h comment.body %></p>
-                            ------------------------------------
-            <% end %>
-            <% form_for [@article, Comment.new] do |f| %> 
-              <p>
-                <%= f.label :name, "Name:" %>
-                <%= f.text_field :name %>
-              </p>
-              <p>
-                <%= f.label :body, "Comment:" %>
-                <%= f.text_area :body, :cols => 50, :rows => 5 %> 
-              </p>
-              <%= f.submit "Submit" %>
-           <% end %>
-            </div>
-            </div>
-	</div>
+<div class="block_content_left">
+  <div class="block_inside">
+    <h3><%= @article.title %></h3>
+    <p><%= @article.body %></p>
+    <p>&nbsp;</p>
+    <p>
+      <%= link_to "Previous Article", @prev %>
+    <% 50.times do %>
+      <%= "&nbsp;" %>
+    <% end %>
+      <%= link_to "Next Article", @next %>
+    </p>
+  </div>                         
+</div>       
+<div class="block_content_right">
+  <div class="block_inside"> 
+    <h3>Archives</h3>
+    <h5><p>2009</p></h5>
+    <ul id="archives">
+      <li>January</li>
+      <li>February</li>
+      <li>March</li>
+      <li>April</li>
+      <li>May</li>
+      <li>June</li>
+      <li>July</li>
+      <li>August</li>
+      <li>September</li>
+      <li>October</li>
+      <li>November</li>
+      <li>December</li>
+    </ul>
+  </div>
+</div>
+<div class="comments">
+  <div class="block_inside">
+    <h3>Comments</h3>
+      <% @article.comments.each do |comment| %>
+        <h6><%= h comment.name %> (<%= time_ago_in_words comment.created_at %> ago)</h6>
+        <p><%= h comment.body %></p>
+        ------------------------------------
+      <% end %>
+      <% form_for [@article, Comment.new] do |f| %> 
+        <p>
+          <%= f.label :name, "Name:" %>
+          <%= f.text_field :name %>
+        </p>
+        <p>
+          <%= f.label :body, "Comment:" %>
+          <%= f.text_area :body, :cols => 50, :rows => 5 %> 
+        </p>
+        <%= f.submit "Submit" %>
+        <% end %>
+      </div>
     </div>
-    </div>
-    
-    
-	<div id="footer">
-         <div class="footer_column long">  
-               <h3>Site by eamon fay, Design by Jorge Soto</h3>  
-               <p>The Bergen Post is a website that blah blah put your information here or send it to me and I will                  add it to the site.  If you need anything else to be managed then just ask this is just filler,                  tons and tons of filler because it is needed for no reason.</p>  
-        </div>  
-  
-        <div class="footer_column">  
-               <h3>More Links</h3>  
-           			 <ul>  
-                		<li><a href="#">Links!</a></li>  
-                		<li><a href="#">Links!</a></li>  
-                		<li><a href="#">Links!</a></li>  
-                		<li><a href="#">Links!</a></li>  
-                		<li><a href="#">Links!</a></li>
-               		</ul>
-           			 <p>&nbsp;</p>
-        </div>  
-              
-           <div class="footer_column">  
-               <h3>RSS/Twitter</h3>  
-           			 <ul>  
-                        <li><a href="">Suscribe to us on Twitter</a></li>  
-                 	  	<li><a href="">RSS Feed</a></li>  
-                   		<li><a href="">What is RSS?</a></li>  
-               		</ul>  
-           </div>  
-
-    </div>
-</body>
-</html>
+  </div>
+</div>

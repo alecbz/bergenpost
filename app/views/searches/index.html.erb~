@@ -37,7 +37,8 @@
             	 <div class="block_inside">
             	 <h1>Search Results</h1>
 <% if @results.empty? %>
-<%= 
+No results found.
+<% end %>
 <% @results.each do |article| %>
 <%= link_to article.title, article %>
 <br />
