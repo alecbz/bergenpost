@@ -4,12 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Bergen Post</title>
     <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
-    <%= javascript_include_tag "tiny_mce/tiny_mce" %>
-    <script language="javascript" type="text/javascript">
-        tinyMCE.init({
-            mode : "textareas"
-        });
-    </script>
+    <%= javascript_include_tag "ckeditor/ckeditor" %>
   </head>
 
   <body>
