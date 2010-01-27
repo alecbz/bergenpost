@@ -1,0 +1,23 @@
+<div id="footer">
+  <div class="footer_column long">  
+    <h3>Site by eamon fay, Design by Jorge Soto</h3>  
+    <p>The Bergen Post is a website that blah blah put your information here or send it to me and I will                  add it to the site.  If you need anything else to be managed then just ask this is just filler,                  tons and tons of filler because it is needed for no reason.</p>  
+  </div>
+  <div class="footer_column">  
+    <h3>More Links</h3>  
+    <ul>  
+      <li><a href="#">Links!</a></li>  
+      <li><a href="#">Links!</a></li>  
+      <li><a href="#">Links!</a></li>  
+      <li><a href="#">Links!</a></li>  
+      <li><a href="#">Links!</a></li>  
+    </ul>  
+  </div>     
+  <div class="footer_column">  
+    <h3>RSS</h3>  
+    <ul>  
+      <li><a href="">RSS Feed</a></li>  
+      <li><a href="">What is RSS?</a></li>  
+    </ul>  
+  </div>
+</div>

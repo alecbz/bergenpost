@@ -2822,3 +2822,23 @@ total hits: 0, results delivered: 0
 [article] refusing re-registration of class Article
 [article] register class Article with index article
 [article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime, category_id: integer)]
+options: {:limit=>:all, :page=>nil, :offset=>0}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: lol
+-->+(body:lol title:lol) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 0 results from AR: []
+Query: lol
+total hits: 0, results delivered: 0
+[article] register class Article with index article
+[article] refusing re-registration of class Article

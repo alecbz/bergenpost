@@ -5,7 +5,6 @@
     <title>Bergen Post</title>
     <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
   </head>
-
   <body>
     <div id="main">
       <div class="container">
