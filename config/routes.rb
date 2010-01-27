@@ -15,6 +15,12 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 
+  map.academies 'academies', :controller => 'articles', :action => 'category', :category => 'academies'
+  map.teachers 'teachers', :controller => 'articles', :action => 'category', :category => 'teachers'
+  map.letters 'letters', :controller => 'articles', :action => 'category', :category => 'letters'
+  map.readercentral 'reader-central', :controller => 'articles', :action => 'category', :category => 'reader-central'
+  map.antigossip 'anti-gossip', :controller => 'articles', :action => 'category', :category => 'anti-gossip'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

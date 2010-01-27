@@ -2,7 +2,7 @@ require 'date'
 require 'digest/sha1'
 
 class ArticlesController < ApplicationController
-  before_filter :authenticate, :except => [:show]
+  before_filter :authenticate, :except => [:show, :category]
 
   # GET /articles
   # GET /articles.xml
@@ -13,6 +13,16 @@ class ArticlesController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @articles }
     end
+  end
+
+  def category
+    @category = Category.find_by_name(params[:category])
+    @articles = Article.find_all_by_category_id(@category[:id])
+    respond_to do |format|
+      format.html 
+      format.xml  { render :xml => @articles }
+    end
+
   end
 
   # GET /articles/1
