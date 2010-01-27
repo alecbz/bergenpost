@@ -8,12 +8,12 @@
   <body>
     <div id="main">
       <div class="container">
-        <%= render :partial => "/layouts/header" %>
+        <%= render :partial => "layouts/header" %>
         <div id="block_columns">
           <%= yield %>
 		    </div>
 	    </div>
     </div>
-	  <%= render :partial => "/layouts/footer" %>
+	  <%= render :partial => "layouts/footer" %>
   </body>
 </html>
