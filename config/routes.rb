@@ -21,6 +21,8 @@ ActionController::Routing::Routes.draw do |map|
   map.readercentral 'reader-central', :controller => 'articles', :action => 'category', :category => 'reader-central'
   map.antigossip 'anti-gossip', :controller => 'articles', :action => 'category', :category => 'anti-gossip'
 
+  map.recent 'recent', :controller => 'articles', :action => 'recent'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

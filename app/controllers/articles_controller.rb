@@ -2,7 +2,7 @@ require 'date'
 require 'digest/sha1'
 
 class ArticlesController < ApplicationController
-  before_filter :authenticate, :except => [:show, :category]
+  before_filter :authenticate, :except => [:show, :category, :recent]
 
   # GET /articles
   # GET /articles.xml
@@ -22,7 +22,15 @@ class ArticlesController < ApplicationController
       format.html 
       format.xml  { render :xml => @articles }
     end
+  end
 
+  def recent
+    @articles = Article.find(:all, :order => 'created_at DESC')
+
+    respond_to do |format|
+      format.html 
+      format.xml  { render :xml => @articles }
+    end
   end
 
   # GET /articles/1
