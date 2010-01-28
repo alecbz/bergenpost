@@ -22,6 +22,7 @@ ActionController::Routing::Routes.draw do |map|
   map.antigossip 'anti-gossip', :controller => 'articles', :action => 'category', :category => 'anti-gossip'
 
   map.recent 'recent', :controller => 'articles', :action => 'recent'
+  map.popular 'popular', :controller => 'articles', :action => 'popular'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
