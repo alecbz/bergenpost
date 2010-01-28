@@ -47,7 +47,9 @@ class ArticlesController < ApplicationController
     rescue
       @next = @article
     end
-    
+    @article.views += 1
+    @article.save
+
     unless params[:comment].nil? or params[:comment].empty?
       @comment = @article.comments.build(params[:comment])
       @comment.save
@@ -85,6 +87,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(params[:article])
     @article.author = Author.find(params[:author][:id])
     @article.category = Category.find(params[:category][:id])
+    @articles.views = 0
 
     respond_to do |format|
       if @article.save
