@@ -1,19 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  # map.logout '/logout', :controller => 'sessions', :action => 'destroy'
-  # map.login '/login', :controller => 'sessions', :action => 'new'
-  # map.register '/register', :controller => 'users', :action => 'create'
-  # map.signup '/signup', :controller => 'users', :action => 'new'
-  # map.resources :users
-
-  # map.resource :session
-
-  map.resources :articles, :has_many => :comments
-  # map.resources :news
-  map.resources :authors
+  map.root :controller => "home"
   
-  map.root({:controller => "home"})
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  map.resources :articles, :has_many => :comments
+  map.resources :authors
 
   map.academies 'academies', :controller => 'articles', :action => 'category', :category => 'academies'
   map.teachers 'teachers', :controller => 'articles', :action => 'category', :category => 'teachers'
@@ -23,6 +12,12 @@ ActionController::Routing::Routes.draw do |map|
 
   map.recent 'recent', :controller => 'articles', :action => 'recent'
   map.popular 'popular', :controller => 'articles', :action => 'popular'
+  
+  map.archives 'archives/:year', :controller => 'archives', :action => 'year'
+  map.archives 'archives/:year/:month', :controller => 'archives', :action => 'month'
+  
+  map.connect ':controller/:action/:id'
+  map.connect ':controller/:action/:id.:format'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

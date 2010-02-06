@@ -2,7 +2,7 @@ require 'date'
 require 'digest/sha1'
 
 class ArticlesController < ApplicationController
-  before_filter :authenticate, :except => [:show, :category]
+  before_filter :authenticate, :except => [:show, :category, :recent, :popular]
 
   # GET /articles
   # GET /articles.xml
@@ -22,12 +22,34 @@ class ArticlesController < ApplicationController
       format.html 
       format.xml  { render :xml => @articles }
     end
+  end
 
+  def recent
+    @articles = Article.find(:all, :order => 'created_at DESC')
+
+    respond_to do |format|
+      format.html 
+      format.xml  { render :xml => @articles }
+    end
+  end
+
+  def popular
+    @articles = Article.find(:all).sort { |a,b| b.popularity <=> a.popularity }
+
+    respond_to do |format|
+      format.html 
+      format.xml  { render :xml => @articles }
+    end
   end
 
   # GET /articles/1
   # GET /articles/1.xml
   def show
+    @years = []
+    Article.find(:all).each do |a|
+      @years << a.created_at.year unless @years.index a.created_at.year
+    end
+  
     @article = Article.find(params[:id])
     begin
       @prev = Article.find((params[:id].to_i-1).to_s)
@@ -39,7 +61,9 @@ class ArticlesController < ApplicationController
     rescue
       @next = @article
     end
-    
+    @article.views += 1
+    @article.save
+
     unless params[:comment].nil? or params[:comment].empty?
       @comment = @article.comments.build(params[:comment])
       @comment.save
@@ -77,6 +101,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(params[:article])
     @article.author = Author.find(params[:author][:id])
     @article.category = Category.find(params[:category][:id])
+    @article.views = 0
 
     respond_to do |format|
       if @article.save

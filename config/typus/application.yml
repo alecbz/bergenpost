@@ -1,0 +1,44 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Article:
+  fields:
+    list: title, views, category, author
+    form: title, body, views, category, author
+  order_by: 
+  relationships: author, category, comments
+  filters: 
+  search: 
+  application: bergenpost
+
+Author:
+  fields:
+    list: fname, lname
+    form: fname, lname
+  order_by: 
+  relationships: articles
+  filters: 
+  search: 
+  application: bergenpost
+
+Category:
+  fields:
+    list: name, display_name
+    form: name, display_name
+  order_by: 
+  relationships: articles
+  filters: 
+  search: name
+  application: bergenpost
+
+Comment:
+  fields:
+    list: name, article
+    form: name, body, article
+  order_by: 
+  relationships: article
+  filters: 
+  search: name
+  application: bergenpost
+

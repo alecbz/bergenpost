@@ -1,0 +1,8 @@
+<div class="block_content_left">
+  <div class="block_inside">
+    <h1><%= @year %></h1>
+    <% @articles.each do |article| %>
+      <%= link_to @article.name, @article %><br />
+    <% end %>
+  </div>
+</div>

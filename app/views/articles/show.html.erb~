@@ -15,21 +15,14 @@
 <div class="block_content_right">
   <div class="block_inside"> 
     <h3>Archives</h3>
-    <h5><p>2009</p></h5>
-    <ul id="archives">
-      <li>January</li>
-      <li>February</li>
-      <li>March</li>
-      <li>April</li>
-      <li>May</li>
-      <li>June</li>
-      <li>July</li>
-      <li>August</li>
-      <li>September</li>
-      <li>October</li>
-      <li>November</li>
-      <li>December</li>
-    </ul>
+    <% @years.each do |year| %>
+      <h5><p><%= link_to year.to_s, "/archives/" + year.to_s %></p></h5>
+      <ul id="archives">
+        <% (1..12).each do |m| %>
+          <li><%= link_to @months[m], "/archives/" + year.to_s + "/" + m %></li>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
 </div>
 <div class="comments">
