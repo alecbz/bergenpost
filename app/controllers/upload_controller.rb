@@ -8,8 +8,16 @@ class UploadController < ApplicationController
     name = File.basename(params[:upload]['file'].original_filename)
     name.sub!(/[^\w\.\-]/, '_')
     path = File.join('public/uploads',name)
-    File.open(path, "wb") { |f| f.write(params[:upload]['file'].read) }e
-    redirect_to "/uploads/" + name
+    f = begin File.new(path, "r+") rescue nil end
+    if f
+      f.close
+      render :text => 'File ' + name + ' already exists. Please use a different filename.'
+    else
+      File.open(path, "wb") { |file| file.write(params[:upload]['file'].read) }
+      redirect_to "/uploads/" + name
+    end
+    
+     #File.open(path, "wb") { |f| f.write(params[:upload]['file'].read) }
   end
   
   def authenticate  
