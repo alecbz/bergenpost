@@ -8,8 +8,7 @@ class UploadController < ApplicationController
     name = File.basename(params[:upload]['file'].original_filename)
     name.sub!(/[^\w\.\-]/, '_')
     path = File.join('public/uploads',name)
-    File.open(path, "wb") { |f| f.write(params[:upload]['file'].read) }
-    # render :text => "Your file has been uploaded as /uploads/" + name
+    File.open(path, "wb") { |f| f.write(params[:upload]['file'].read) }e
     redirect_to "/uploads/" + name
   end
   

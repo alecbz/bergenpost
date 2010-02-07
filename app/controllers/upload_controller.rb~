@@ -1,6 +1,9 @@
 class UploadController < ApplicationController
   before_filter :authenticate
   
+  def index #method should be here so before_filer works
+  end
+  
   def save
     name = File.basename(params[:upload]['file'].original_filename)
     name.sub!(/[^\w\.\-]/, '_')
