@@ -2,6 +2,10 @@ class UploadController < ApplicationController
   before_filter :authenticate
   
   def index #method should be here so before_filer works
+    @files = []
+    Dir.foreach('public/uploads/') do |filename|
+      @files << filename unless filename[0].chr == '.'#if File.file? filename
+    end
   end
   
   def save

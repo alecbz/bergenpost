@@ -8,5 +8,10 @@
     </p>
     <%= submit_tag 'Upload' %>
     <% end %>
+    <br /><br />
+    <h1>Uploaded files:</h1>
+    <% @files.each do |file| %>
+      <%= link_to file, 'uploads/' + file %><br />
+    <% end %>
   </div>
 </div>
