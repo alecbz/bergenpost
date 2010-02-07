@@ -1,0 +1,12 @@
+<div class="block_content_left">
+  <div class="block_inside">
+    <h1>Upload Image</h1>
+    <% form_tag ({:action => 'save'}, :multipart => true) do %>
+    <p>
+      Choose file:
+      <%= file_field 'upload', 'file' %>
+    </p>
+    <%= submit_tag 'Upload' %>
+    <% end %>
+  </div>
+</div>

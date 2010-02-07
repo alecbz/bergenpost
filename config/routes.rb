@@ -16,6 +16,8 @@ ActionController::Routing::Routes.draw do |map|
   map.archives 'archives/:year', :controller => 'archives', :action => 'year'
   map.archives 'archives/:year/:month', :controller => 'archives', :action => 'month'
   
+  map.upload 'uploads', :controller => 'upload', :action => 'index'
+  
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 
