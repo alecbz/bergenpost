@@ -1,8 +1,7 @@
 class UploadController < ApplicationController
   before_filter :authenticate
-
-  def index
-    render :file => 'app/views/upload/index.html.erb'
+  
+  def index #method should be here so before_filer works
   end
   
   def save
@@ -10,7 +9,8 @@ class UploadController < ApplicationController
     name.sub!(/[^\w\.\-]/, '_')
     path = File.join('public/uploads',name)
     File.open(path, "wb") { |f| f.write(params[:upload]['file'].read) }
-    render :text => "Your file has been uploaded as /uploads/" + name
+    # render :text => "Your file has been uploaded as /uploads/" + name
+    redirect_to "/uploads/" + name
   end
   
   def authenticate  
