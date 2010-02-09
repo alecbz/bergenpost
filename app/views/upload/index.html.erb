@@ -11,7 +11,7 @@
     <br /><br />
     <h1>Uploaded files:</h1>
     <% @files.each do |file| %>
-      <%= link_to file, 'uploads/' + file %><br />
+      <%= link_to file.name, '/uploads/' + file.name %><br />
     <% end %>
   </div>
 </div>

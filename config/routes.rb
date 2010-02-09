@@ -18,6 +18,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.upload 'upload', :controller => 'upload', :action => 'index'
   map.uploads 'uploads', :controller => 'upload', :action => 'index'
+  map.uploads 'uploads/:name', :controller => 'upload', :action => 'show_file'
+  map.uploads 'uploads/:name.:extension', :controller => 'upload', :action => 'show_file'
+  map.uploads 'uploads/id/:id', :controller => 'upload', :action => 'show_file'
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

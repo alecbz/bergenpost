@@ -1,27 +1,57 @@
 class UploadController < ApplicationController
   before_filter :authenticate
   
-  def index #method should be here so before_filer works
-    @files = []
-    Dir.foreach('public/uploads/') do |filename|
-      @files << filename unless filename[0].chr == '.'#if File.file? filename
-    end
+  def index
+    @files = DataFile.find(:all)
+    # Dir.foreach('public/uploads/') do |filename|
+    #  @files << filename unless filename[0].chr == '.'#if File.file? filename
+    # end
   end
   
   def save
-    name = File.basename(params[:upload]['file'].original_filename)
-    name.sub!(/[^\w\.\-]/, '_')
-    path = File.join('public/uploads',name)
-    f = begin File.new(path, "r+") rescue nil end
-    if f
-      f.close
-      render :text => 'File ' + name + ' already exists. Please use a different filename.'
+    fname = File.basename(params[:upload]['file'].original_filename)
+    fname.sub!(/[^\w\.\-]/, '_')
+    df = DataFile.new
+    df.name = fname
+    # df.data = Marshal.dump("Hello World\n")
+    df.data = params[:upload]['file']
+    
+    if df.save
+      redirect_to "/uploads/" + df.name
     else
-      File.open(path, "wb") { |file| file.write(params[:upload]['file'].read) }
-      redirect_to "/uploads/" + name
+      render :text => "error saving file"
+    end
+    # path = File.join('public/uploads',name)
+    # f = begin File.new(path, "r+") rescue nil end
+    # if f
+    #   f.close
+    #   render :text => 'File ' + name + ' already exists. Please use a different filename.'
+    # else
+    #   File.open(path, "wb") { |file| file.write(params[:upload]['file'].read.to_s) }
+    #   redirect_to "/uploads/" + name
+    # end
+    
+    # File.open(path, "wb") { |f| f.write(params[:upload]['file'].read) }
+  end
+  
+  def show_file
+    file = nil
+    if params[:name] and params[:extension]
+      file = DataFile.find_by_name(params[:name] + '.' + params[:extension])
+    elsif params[:name]
+      file = DataFile.find_by_name(params[:name])
+    elsif params[:id]
+      file = DataFile.find(params[:id])
     end
     
-     #File.open(path, "wb") { |f| f.write(params[:upload]['file'].read) }
+    if file.nil?
+      render :text => 'could not find file'
+    else
+      name = File.join('tmp',file.name)
+      # File.open(name,"wb") { |f| f.write(Marshal.load(file.data)) }
+      File.open(name,"wb") { |f| f.write(file.data) }
+      render :file => name
+    end
   end
   
   def authenticate  
