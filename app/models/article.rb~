@@ -7,6 +7,6 @@ class Article < ActiveRecord::Base
   # accepts_nested_attributes_for :comments, :allow_destroy => :true
 
   def popularity
-    views*1 + comments.size*3
+    views*1 + comments.size*1
   end
 end
