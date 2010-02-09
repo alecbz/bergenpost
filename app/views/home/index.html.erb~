@@ -3,7 +3,9 @@
     <div class="block_inside">
       <h3><%= link_to a.title, a %></h3>
     	<p>
-    	  <%= a.body %>
+    	  <% if a.body.size <= 240 %>
+    	    <%= a.body %>
+    	  <%= a.body[0,240] %>
       </p>
     </div>
   </div>
