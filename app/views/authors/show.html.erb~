@@ -1,13 +1,16 @@
-<p>
-  <b>Fname:</b>
-  <%=h @author.fname %>
-</p>
-
-<p>
-  <b>Lname:</b>
-  <%=h @author.lname %>
-</p>
-
-
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>
+<div class="block_content_left">
+  <div class="block_inside">
+    <div style="font-weight: bold; font-size: 20pt;"><%= @author.name %></div>
+    <%= '(' + (link_to 'change name', edit_author_path(@author)) + '/' + (link_to 'delete', @author, :confirm => 'Are you sure you want to delete this author?', :method => :delete) + ')' %>
+    <br /><br />
+    <% if @author.articles.empty? %>
+      This author has no articles.
+    <% end %>
+    <% @author.articles.each do |article| %>
+      <%= link_to article.title, article %>
+      <br />
+    <% end %>
+    <br /><br />
+    <%= link_to 'Back', authors_path %>
+  </div>
+</div>

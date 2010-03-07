@@ -11,15 +11,15 @@
       <%= link_to "Next Article", @next %>
     </p>
   </div>                         
-</div>       
+</div>
 <div class="block_content_right">
   <div class="block_inside"> 
     <h3>Archives</h3>
     <% @years.each do |year| %>
       <h5><p><%= link_to year.to_s, "/archives/" + year.to_s %></p></h5>
       <ul id="archives">
-        <% (1..12).each do |m| %>
-          <li><%= link_to @months[m], "/archives/" + year.to_s + "/" + m.to_s %></li>
+        <% ('01'..'12').each do |m| %>
+          <li><%= link_to @months[m.to_i], "/archives/" + year.to_s + "/" + m %></li>
         <% end %>
       </ul>
     <% end %>
@@ -27,24 +27,20 @@
 </div>
 <div class="comments">
   <div class="block_inside">
-    <h3>Comments</h3>
-      <% @article.comments.each do |comment| %>
-        <h6><%= h comment.name %> (<%= time_ago_in_words comment.created_at %> ago)</h6>
-        <p><%= h comment.body %></p>
-        ------------------------------------
-      <% end %>
-      <% form_for [@article, Comment.new] do |f| %> 
-        <p>
-          <%= f.label :name, "Name:" %>
-          <%= f.text_field :name %>
-        </p>
-        <p>
-          <%= f.label :body, "Comment:" %>
-          <%= f.text_area :body, :cols => 50, :rows => 5 %> 
-        </p>
-        <%= f.submit "Submit" %>
-        <% end %>
-      </div>
+    <div id="comments">
+      <h3>Comments</h3>
+      <%= render :partial => @article.comments %>
     </div>
+    <% remote_form_for [@article, Comment.new] do |f| %> 
+      <p>
+	<%= f.label :name, "Name:" %>
+	<%= f.text_field :name %>
+      </p>
+      <p>
+	<%= f.label :body, "Comment:" %>
+	<%= f.text_area :body, :cols => 50, :rows => 5 %> 
+      </p>
+      <%= f.submit "Submit" %>
+    <% end %>
   </div>
 </div>

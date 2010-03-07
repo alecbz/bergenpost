@@ -39,7 +39,7 @@ class CommentsController < ApplicationController
         format.html { redirect_to @article }
         format.xml  { render :xml => @comment, :status => :created, :location => @comment }
       else
-        format.html { redirect_to @article "render :action => \"new\"" }
+        format.html { redirect_to @article }
         format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
       end
     end

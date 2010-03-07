@@ -38,6 +38,7 @@ class CommentsController < ApplicationController
         flash[:notice] = 'Comment was successfully created.'
         format.html { redirect_to @article }
         format.xml  { render :xml => @comment, :status => :created, :location => @comment }
+	format.js
       else
         format.html { redirect_to @article }
         format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }

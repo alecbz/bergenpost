@@ -1,12 +1,8 @@
 @charset "utf-8";
-/* CSS Document */
-/*Created by Eamon Fay - 2009*/
 
 body {   
     margin:0px; padding:0px;   
     background-color:#848484;
-	font-family:
-	
 }   
   
 #main {   
@@ -80,17 +76,15 @@ ul#menu li a.active, ul#menu li a:hover {
 #block_columns {     
     margin-bottom:20px;   
 } 
- 
- 
-.block_content_left .block_inside {    
-background:none;   
-width:600px;
-float:left;   
-margin-left:10px;
-margin-top:50px;
 
-}   
-.block_content_left .thumbnail { float:left; margin-right:20px; border:1px solid #979390; }  
+.block_content_left .block_inside {    
+  background:none;   
+  width:600px;
+  float:left;   
+  margin-left:10px;
+  margin-top:50px;
+}
+/* .block_content_left .thumbnail { float:left; margin-right:20px; border:1px solid #979390; }  */
 
 .block_content_right .block_inside {    
 background:none;   
@@ -98,7 +92,6 @@ width:300px;
 float:right;   
 margin-left:10px;
 margin-top:10px;
-
 }  
 
 .comments .block_inside {    
@@ -107,8 +100,8 @@ width:300px;
 float:bottom;   
 margin-left:10px;
 margin-top:10px;
+}
 
-}  
 .block_content_right .thumbnail { float:left; margin-right:20px; border:1px solid #979390; }  
 
 #footer {   

@@ -1,4 +1,7 @@
 class ArchivesController < ApplicationController
+  def index
+    @articles = Article.find(:all)
+  end
   
   def year
     @year = params[:year]

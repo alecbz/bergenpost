@@ -1,12 +1,4 @@
+<table id="block_colums" >
 <% @latest_articles.each do |a| %>
-  <div class="block_content_left">
-    <div class="block_inside">
-      <h3><%= link_to a.title, a %></h3>
-    	<p>
-    	  <% if a.body.size <= 240 %>
-    	    <%= a.body %>
-    	  <%= a.body[0,240] %>
-      </p>
-    </div>
-  </div>
+  <%= render :partial => "snippet", :locals => {:article => a} %>
 <% end %>

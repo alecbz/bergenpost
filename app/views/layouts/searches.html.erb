@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Bergen Post</title>
-    <link href="/stylesheets/homestyle.css" rel="stylesheet" type="text/css" />
+    <%= stylesheet_link_tag "style" %>
   </head>
   <body>
     <div id="main">
@@ -11,9 +11,9 @@
         <%= render :partial => "layouts/header" %>
         <div id="block_columns">
           <%= yield %>
-		    </div>
-	    </div>
+	</div>
+      </div>
     </div>
-	  <%= render :partial => "layouts/footer" %>
+    <%= render :partial => "layouts/footer" %>
   </body>
 </html>

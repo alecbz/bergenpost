@@ -1,25 +1,25 @@
 <div class="block_content_left">
   <div class="block_inside">
-<h1>Listing articles</h1>
+    <h1>Listing articles</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <!--<th>Body</th>-->
-    <!--<th>Time posted</th>-->
-    <th>Author</th>
-  </tr>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+      </tr>
 
-<% for article in @articles %>
-  <tr>
-    <td><%=link_to(h(article.title),article) %></td>
-    <td><%=link_to(h(article.author),article.author)%></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+    <% for article in @articles %>
+      <tr>
+        <td><%=link_to(h(article.title),article) %></td>
+        <td><%=link_to(h(article.author),article.author)%></td>
+        <td><%= link_to 'Change name', edit_article_path(article) %></td>
+        <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+    </table>
 
-<br />
+    <br />
 
-<%= link_to 'New article', new_article_path %>
+    <%= link_to 'New article', new_article_path %>
+  </div>
+</div>

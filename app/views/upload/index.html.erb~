@@ -11,7 +11,11 @@
     <br /><br />
     <h1>Uploaded files:</h1>
     <% @files.each do |file| %>
-      <%= link_to file.name, 'uploads/' + file.name %><br />
+      <%= link_to file.key, file.url %>
+      <br />
+    <% end %>
+    <% if @files.empty? %>
+      <%= "No files found." %>
     <% end %>
   </div>
 </div>

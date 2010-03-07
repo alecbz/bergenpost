@@ -1,0 +1,10 @@
+    <% div_for article do %>
+      <h3><%= link_to article.title, article %></h3>
+      <p>
+	<% if article.body.size <= 240 %>
+	  <%= article.body %>
+	<% else %>
+	  <%= article.body[0,240] + '...' %>
+	<% end %>
+      </p>
+    <% end %>

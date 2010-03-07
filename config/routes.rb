@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.root :controller => "home"
   
+  map.feed 'feed', :controller => 'articles', :action => 'feed'
+  map.feed 'feed.:format', :controller => 'articles', :action => 'feed'
   map.resources :articles, :has_many => :comments
   map.resources :authors
 
@@ -18,9 +20,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.upload 'upload', :controller => 'upload', :action => 'index'
   map.uploads 'uploads', :controller => 'upload', :action => 'index'
-  map.uploads 'uploads/:name', :controller => 'upload', :action => 'show_file'
-  map.uploads 'uploads/:name.:extension', :controller => 'upload', :action => 'show_file'
-  map.uploads 'uploads/id/:id', :controller => 'upload', :action => 'show_file'
+  # map.uploads 'uploads/:name', :controller => 'upload', :action => 'show_file'
+  # map.uploads 'uploads/:name.:extension', :controller => 'upload', :action => 'show_file'
+  # map.uploads 'uploads/id/:id', :controller => 'upload', :action => 'show_file'
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
