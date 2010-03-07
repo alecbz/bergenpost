@@ -9,9 +9,20 @@
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
-# require "acts_as_ferret"
 
 Rails::Initializer.run do |config|
+  config.gem "ferret"
+  config.gem "s3"
+  config.gem "mime-types", :lib => "mime/types"
+  config.gem "thinking-sphinx", :lib => "thinking_sphinx", :version => '1.3.16'
+  
+  config.time_zone = 'UTC'
+  
+  config.action_controller.session = {
+    :session_key => '_bergenpost_session',
+    :secret      => '67815773a32f6b1751d02a75c1ad16ff2f10d4ad045a710158e483f63fad4a34d4a1b3192fe21ea793cd3f3ee74b34931428b4685b9dd376a850cf18ea91252d'
+  }
+
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
@@ -27,10 +38,7 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
   # config.gem "acts_as_ferret", :version => "0.4.4"
-  config.gem "ferret"
-  config.gem "s3"
-  config.gem "mime-types", :lib => "mime/types"
-# Only load the plugins named here, in the order given. By default, all plugins 
+  # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
@@ -45,16 +53,11 @@ Rails::Initializer.run do |config|
   # Make Time.zone default to the specified zone, and make Active Record store time values
   # in the database in UTC, and return them converted to the specified local zone.
   # Run "rake -D time" for a list of tasks for finding time zone names. Uncomment to use default local time.
-  config.time_zone = 'UTC'
 
   # Your secret key for verifying cookie session data integrity.
   # If you change this key, all old sessions will become invalid!
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
-  config.action_controller.session = {
-    :session_key => '_bergenpost_session',
-    :secret      => '67815773a32f6b1751d02a75c1ad16ff2f10d4ad045a710158e483f63fad4a34d4a1b3192fe21ea793cd3f3ee74b34931428b4685b9dd376a850cf18ea91252d'
-  }
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information
