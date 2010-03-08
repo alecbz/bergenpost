@@ -1,13 +1,12 @@
 <div class="block_content_left">
   <div class="block_inside">
     <h1>Authors</h1>
-
-    <% for author in @authors %>
-      <%=link_to (h author.name), author %><br />
-    <% end %>
-
-    <br />
-
-    <%= link_to 'New author', new_author_path %>
+    <%= '(' + (link_to 'create new', new_author_path) + ')'%>
+    <br /><br />
+    <ol>
+      <% for author in @authors %>
+	<li number="<%= author.id %>"><%=link_to (h author.name), author %></li>
+      <% end %>
+    </ol>
   </div>
 </div>

@@ -1,14 +1,16 @@
+<div class="block_content_left">
+  <div class="block_inside">
 <h1>New author</h1>
 
 <% form_for(@author) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :fname "First name" %><br />
+    <%= f.label :fname,"First name" %><br />
     <%= f.text_field :fname %>
   </p>
   <p>
-    <%= f.label :lname "Last name" %><br />
+    <%= f.label :lname,"Last name" %><br />
     <%= f.text_field :lname %>
   </p>
   <p>
@@ -17,3 +19,5 @@
 <% end %>
 
 <%= link_to 'Back', authors_path %>
+</div>
+</div>

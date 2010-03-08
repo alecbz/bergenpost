@@ -9,9 +9,9 @@
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
-# require "acts_as_ferret"
 
 Rails::Initializer.run do |config|
+  config.get "mysql"
   config.gem "ferret"
   config.gem "s3"
   config.gem "mime-types", :lib => "mime/types"

@@ -1,0 +1,20 @@
+[Sun Mar  7 23:29:19.213 2010] 0.019 sec [all/2/rel 1 (0,20)] [article_core] mysql
+[Sun Mar  7 23:30:15.504 2010] 0.000 sec [scan/2/rel 0 (0,20)] [article_core]
+[Sun Mar  7 23:30:15.602 2010] 0.000 sec [scan/2/rel 0 (0,20)] [article_core]
+[Sun Mar  7 23:30:27.716 2010] 0.000 sec [all/2/rel 1 (0,20)] [article_core] sphinx
+[Sun Mar  7 23:31:01.612 2010] 0.000 sec [all/2/rel 2 (0,20)] [article_core] sphinx
+[Sun Mar  7 23:31:14.966 2010] 0.000 sec [all/2/rel 0 (0,20)] [article_core] >
+[Sun Mar  7 23:31:18.336 2010] 0.000 sec [all/2/rel 0 (0,20)] [article_core] ?
+[Sun Mar  7 23:31:20.466 2010] 0.000 sec [all/2/rel 1 (0,20)] [article_core] ferret
+[Sun Mar  7 23:31:39.746 2010] 0.000 sec [scan/2/rel 0 (0,20)] [article_core]
+[Sun Mar  7 23:31:39.849 2010] 0.000 sec [scan/2/rel 0 (0,20)] [article_core]
+[Sun Mar  7 23:31:56.973 2010] 0.000 sec [all/2/rel 1 (0,20)] [article_core] hai
+[Sun Mar  7 23:32:04.256 2010] 0.000 sec [all/2/rel 2 (0,20)] [article_core] sphinx
+[Sun Mar  7 23:51:01.663 2010] 0.000 sec [all/2/rel 1 (0,20)] [article_core] hai
+[Sun Mar  7 23:51:34.661 2010] 0.000 sec [scan/2/rel 0 (0,20)] [article_core]
+[Sun Mar  7 23:51:34.778 2010] 0.000 sec [scan/2/rel 0 (0,20)] [article_core]
+[Sun Mar  7 23:51:46.667 2010] 0.000 sec [all/2/rel 0 (0,20)] [article_core] lol
+[Sun Mar  7 23:51:50.206 2010] 0.000 sec [all/2/rel 0 (0,20)] [article_core] new
+[Sun Mar  7 23:51:57.776 2010] 0.000 sec [all/2/rel 0 (0,20)] [article_core] lol
+[Sun Mar  7 23:52:02.647 2010] 0.000 sec [all/2/rel 1 (0,20)] [article_core] o hai
+[Sun Mar  7 23:52:07.576 2010] 0.000 sec [all/2/rel 0 (0,20)] [article_core] Zach

@@ -11,6 +11,7 @@
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
+  config.gem "mysql"
   config.gem "ferret"
   config.gem "s3"
   config.gem "mime-types", :lib => "mime/types"
