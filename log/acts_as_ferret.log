@@ -5237,3 +5237,47 @@ Will use local index.
 using index in /home/alec/bergenpost/index/development/article
 [article] register class Article with index article
 [article] default field list for index article: [:title, :body]
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :body]
+Will use local index.
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:title, :body]
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+Will use local index.
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:body, :title]
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article

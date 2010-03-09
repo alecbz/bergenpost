@@ -5,7 +5,7 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: bergenpost
+  database: bergenpost_rails
   pool: 5
   username: root
   password: admin
