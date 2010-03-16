@@ -7,11 +7,9 @@
     <%= auto_discovery_link_tag :atom, '/feed.atom' %>
   </head>
   <body>
-    <div id="main" class="container">
-      <%= render :partial => "layouts/header" %>
-      <div id="snippets">
-	<%= yield %>
-      </div>
+    <%= render :partial => "layouts/header" %>
+    <div id="main">
+      <%= yield %>
     </div>
     <%= render :partial => "layouts/footer" %>
   </body>

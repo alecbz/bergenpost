@@ -1,10 +1,6 @@
 <% div_for article, :class => 'snippet' do %>
   <h3><%= link_to article.title, article %></h3>
   <p>
-    <% if article.body.size <= 240 %>
-      <%= article.body %>
-    <% else %>
-      <%= article.body[0,240] + '...' %>
-    <% end %>
+    <%= truncate article.body.gsub(/<.*?>/,'').gsub(/&.*?;/,''), :length => 800 %>
   </p>
 <% end %>

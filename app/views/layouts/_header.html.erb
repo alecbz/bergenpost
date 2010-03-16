@@ -1,4 +1,4 @@
-<div id="header">  
+<div id="header">
   <ul id="menu">
     <li><a href="/popular/">Popular </a></li>
     <li><a href="/recent/">Recent </a></li>
@@ -9,10 +9,10 @@
     <li><a href="/anti-gossip/">Anti-Gossip</a></li>
   </ul>
   <a href="/"><div id="logo"></div></a><!-- this is incrediblly silly but as I can't seem to get it to work with an img tag I'll leave it for now-->
-</div>
-<div id="search">
-  <% form_tag({:controller => 'searches', :action => 'index'}, :method => 'get') do %>
-    <%= text_field_tag "q", params[:q] %>
-    <%= submit_tag "Search" %>
-  <% end %>
+  <div id="search">
+    <% form_tag({:controller => 'searches', :action => 'index'}, :method => 'get') do %>
+      <%= text_field_tag "q", params[:q] %>
+      <%= submit_tag "Search" %>
+    <% end %>
+  </div>
 </div>

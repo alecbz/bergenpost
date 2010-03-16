@@ -1,46 +1,40 @@
-<div class="block_content_left">
-  <div class="block_inside">
+<div id="article_section">
+  <% div_for @article do %>
     <h1><%= @article.title %></h1>
     <p><%= @article.body %></p>
-    <p>&nbsp;</p>
+  <% end %>
+  <br />
+  <p>
+    <%= link_to "Previous Article", @prev, :id => "prev_article" %>
+    <%= link_to "Next Article", @next, :id => "next_article" %>
+  </p>
+  <br /><br />
+</div>
+<div id="archives">
+  <h3><%= link_to 'Archives', '/archives/' %></h3>
+  <% @years.each do |year| %>
+    <h5><%= link_to year.to_s, "/archives/" + year.to_s %></h5>
+    <ul>
+      <% ('01'..'12').each do |m| %>
+        <li><%= link_to @months[m.to_i], "/archives/" + year.to_s + "/" + m %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+<div id="comment_section">
+  <div id="comments">
+    <h3>Comments</h3>
+    <%= render :partial => @article.comments %>
+  </div>
+  <% remote_form_for [@article, Comment.new] do |f| %> 
     <p>
-      <%= link_to "Previous Article", @prev %>
-    <% 50.times do %>
-      <%= "&nbsp;" %>
-    <% end %>
-      <%= link_to "Next Article", @next %>
+      <%= f.label :name, "Name:" %>
+      <%= f.text_field :name %>
     </p>
-  </div>                         
-</div>
-<div class="block_content_right">
-  <div class="block_inside"> 
-    <h3>Archives</h3>
-    <% @years.each do |year| %>
-      <h5><p><%= link_to year.to_s, "/archives/" + year.to_s %></p></h5>
-      <ul id="archives">
-        <% ('01'..'12').each do |m| %>
-          <li><%= link_to @months[m.to_i], "/archives/" + year.to_s + "/" + m %></li>
-        <% end %>
-      </ul>
-    <% end %>
-  </div>
-</div>
-<div class="comments">
-  <div class="block_inside">
-    <div id="comments">
-      <h3>Comments</h3>
-      <%= render :partial => @article.comments %>
-    </div>
-    <% remote_form_for [@article, Comment.new] do |f| %> 
-      <p>
-	<%= f.label :name, "Name:" %>
-	<%= f.text_field :name %>
-      </p>
-      <p>
-	<%= f.label :body, "Comment:" %>
-	<%= f.text_area :body, :cols => 50, :rows => 5 %> 
-      </p>
-      <%= f.submit "Submit" %>
-    <% end %>
-  </div>
+    <p>
+      <%= f.label :body, "Comment:" %>
+      <%= f.text_area :body, :cols => 50, :rows => 5 %> 
+    </p>
+    <%= f.submit "Submit" %>
+  <% end %>
 </div>

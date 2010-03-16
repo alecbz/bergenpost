@@ -1,27 +1,28 @@
 @charset "utf-8";
 
-body {   
-  margin:0px; padding:0px;   
-  background-color:#848484;   
-}   
-  
-div#main {   
-  background-color:#c4c0be;
-  background-image:url(../images/background.jpg);
-  background-repeat:no-repeat;
+body {
+  margin:0px; padding:0px;
+  background-color:#848484;
+}
+
+#main {
+  background-color:#ededed;
   min-height:700px;
   width:1059px;
   margin:0 auto;
   position:relative;
-}   
-
-#footer {   
-  color:white;   
-  padding:40px;   
+  top:-19px; /* not ideal but it's working for now */
+  margin-bottom:20px;
 }   
 
 #header {
   padding-top:20px;
+  background-image:url(../images/header.jpeg);
+  background-repeat:no-repeat;
+  width:1059px;
+  height:183px;
+  position:relative;
+  margin:0 auto;
 }
 
 #logo {
@@ -68,20 +69,39 @@ ul#menu li a.active, ul#menu li a:hover {
   color:#211e1e;
 }
 
-#snippets {
- margin-bottom:20px;
- margin-top:50px;
- width:1059px;
+#article_section {    
+  background:none;   
+  width:600px;
+  float:left;   
+  margin-left:10px;
+  margin-top:50px;
 }
- 
-.snippet {
-  width:343px;
-  float:left;
-  margin-left:5px;
+
+#archives {    
+  background:none;   
+  width:300px;
+  float:right;   
+  margin-left:10px;
+  margin-top:10px;
+} 
+
+#comment_section {    
+  background:none;   
+  width:300px;
+  float:bottom;   
+  margin-left:10px;
+  margin-top:10px;
+}
+
+#search{
+  float:right;
+  margin-top:20px;
   margin-right:5px;
 }
 
- #footer {   
+#footer {   
+  color:white;   
+  padding:40px;
   font-family:Verdana, Arial, Helvetica, sans-serif;   
   font-size:10px; 
   margin-bottom:10px;  
@@ -111,9 +131,10 @@ ul#menu li a.active, ul#menu li a:hover {
   margin:0px;   
   padding:0px;   
 }
- 
-#search{
-  float:right;
-  margin-top:20px;
+
+.snippet {
+  width:343px;
+  float:left;
+  margin-left:5px;
   margin-right:5px;
 }

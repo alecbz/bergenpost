@@ -5,15 +5,12 @@
     <title>Bergen Post</title>
     <%= stylesheet_link_tag "style" %>
     <%= javascript_include_tag :all %>
-    <%= auto_discovery_link_tag :atom, formatted_articles_path(:atom) %>
+    <%= auto_discovery_link_tag :atom, '/feed.atom' %>
   </head>
   <body>
+    <%= render :partial => "layouts/header" %>
     <div id="main">
-      <div class="container">
-        <%= render :partial => "layouts/header" %>
-        <div id="block_columns">
-          <%= yield %>
-	</div>
+        <%= yield %>
       </div>
     </div>
     <%= render :partial => "layouts/footer" %>

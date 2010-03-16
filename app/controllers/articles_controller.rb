@@ -58,18 +58,19 @@ class ArticlesController < ApplicationController
     end
   
     @article = Article.find(params[:id])
+    @prev = 
     begin
-      @prev = Article.find((params[:id].to_i-1).to_s)
+      Article.find((params[:id].to_i-1).to_s)
     rescue
-      @prev = @article
+      @article
     end
+    @next = 
     begin
-      @next = Article.find((params[:id].to_i+1).to_s)
+      Article.find((params[:id].to_i+1).to_s)
     rescue
-      @next = @article
+      @article
     end
-    @article.views += 1
-    @article.save
+    Article.increment_counter(:views, params[:id])
 
     unless params[:comment].nil? or params[:comment].empty?
       @comment = @article.comments.build(params[:comment])
@@ -77,8 +78,8 @@ class ArticlesController < ApplicationController
     end
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @article }
+      format.html
+      format.xml { render :xml => @article }
     end
   end
 

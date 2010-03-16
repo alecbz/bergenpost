@@ -1,4 +1,3 @@
-<table id="block_colums" >
 <% @latest_articles.each do |a| %>
   <%= render :partial => "snippet", :locals => {:article => a} %>
 <% end %>

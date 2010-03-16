@@ -1,19 +1,17 @@
 <div id="footer">
-  <div class="footer_column long">  
-    <h3>Site by Alec Benzer, Eamon Fay, Design by Jorge Soto</h3>  
+  <div id="blurb">  
+    <h3>Webmasters Alec Benzer, Eamon Fay, Jorge Soto</h3>  
     <p>The Bergen Post is a website that blah blah put your information here or send it to me and I will                  add it to the site.  If you need anything else to be managed then just ask this is just filler,                  tons and tons of filler because it is needed for no reason.</p>  
   </div>
-  <div class="footer_column">  
+  <div id="links">  
     <h3>More Links</h3>  
-    <ul>  
-      <li><a href="#">Links!</a></li>  
-      <li><a href="#">Links!</a></li>  
-      <li><a href="#">Links!</a></li>  
-      <li><a href="#">Links!</a></li>  
-      <li><a href="#">Links!</a></li>  
+    <ul> 
+      <% 5.times do %>
+        <li><a href="#">Links!</a></li>  
+      <% end %>
     </ul>  
   </div>     
-  <div class="footer_column">  
+  <div id="feed"class="footer_column">  
     <h3>Atom</h3>  
     <ul>  
       <li><%= link_to "Atom feed", '/feed.atom' %></li>  

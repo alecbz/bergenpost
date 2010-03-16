@@ -5,6 +5,8 @@ class Article < ActiveRecord::Base
   
   acts_as_ferret :fields => [:title, :body]
   
+  validates_presence_of :title, :body
+  
   define_index do
     indexes body
     indexes title
@@ -13,4 +15,5 @@ class Article < ActiveRecord::Base
   def popularity
     views*1 + comments.size*1
   end
+  
 end

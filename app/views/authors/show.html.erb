@@ -1,19 +1,15 @@
-<div class="block_content_left">
-  <div class="block_inside">
-    <h1><%= @author.name %></h1>
-    <%= '(' + (link_to 'change name', edit_author_path(@author)) + '/' + (link_to 'delete', @author, :confirm => 'Are you sure you want to delete this author?', :method => :delete) + ')' %>
-    <br /><br />
-    <h3>Articles</h3>
-    <% if @author.articles.empty? %>
-      This author has no articles.
-    <% else %>
-      <ol>
-	<% @author.articles.each do |article| %>
-	  <li><%= link_to article.title, article %></li>
-	<% end %>
-      </ol>
+<h1><%= @author.name %></h1>
+<%= '(' + (link_to 'change name', edit_author_path(@author)) + '/' + (link_to 'delete', @author, :confirm => 'Are you sure you want to delete this author?', :method => :delete) + ')' %>
+<br /><br />
+<h3>Articles</h3>
+<% if @author.articles.empty? %>
+  This author has no articles.
+<% else %>
+  <ol>
+    <% @author.articles.each do |article| %>
+      <li><%= link_to article.title, article %></li>
     <% end %>
-    <br /><br />
-    <%= link_to 'Back to authors', authors_path %>
-  </div>
-</div>
+  </ol>
+<% end %>
+<br /><br />
+<%= link_to 'Back to authors', authors_path %>
