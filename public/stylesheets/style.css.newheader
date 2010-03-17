@@ -15,14 +15,14 @@ body {
   width:1039px;
   margin:0 auto;
   position:relative;
-  top:-19px; /* not ideal but it's working for now */
+  top:-45px; /* not ideal but it's working for now */
   margin-bottom:20px;
   padding: 10px;
 }
 
 #header {
   padding-top:20px;
-  background-image:url(../images/header.jpeg);
+/*   background-image:url(../images/header.jpeg); */
   background-repeat:no-repeat;
   width:1059px;
   height:183px;
@@ -159,16 +159,4 @@ ul#menu li a.active, ul#menu li a:hover {
   float:bottom;   
   margin-left:10px;
   margin-top:10px;
-}
-
-.articles div {
-  width: 500px;
-}
-
-.articles .odd-line {
-  color: white;
-}
-
-.articles .even-line {
-  color: black;
 }

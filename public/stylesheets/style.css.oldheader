@@ -160,15 +160,3 @@ ul#menu li a.active, ul#menu li a:hover {
   margin-left:10px;
   margin-top:10px;
 }
-
-.articles div {
-  width: 500px;
-}
-
-.articles .odd-line {
-  color: white;
-}
-
-.articles .even-line {
-  color: black;
-}

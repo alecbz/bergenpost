@@ -1,0 +1,93 @@
+<div id="header">
+  <table id="Table_01" width="1059" height="136" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td colspan="11">
+      <img src="images/admins_01.gif" width="978" height="15" alt=""></td>
+      <td rowspan="6">
+      <img src="images/admins_02.gif" width="81" height="135" alt=""></td>
+    </tr>
+    <tr>
+      <td rowspan="5">
+      <img src="images/admins_03.gif" width="36" height="120" alt=""></td>
+      <td rowspan="4">
+      <a href="index.html">
+              <img src="images/Banner.gif" width="456" height="107" border="0" alt=""></a></td>
+      <td colspan="9">
+      <img src="images/admins_05.gif" width="486" height="5" alt=""></td>
+    </tr>
+    <tr>
+      <td colspan="5" rowspan="2">
+      <img src="images/admins_06.gif" width="433" height="77" alt=""></td>
+      <td>
+      <a href="feed.atom">
+              <img src="images/RSS.gif" width="16" height="16" border="0" alt=""></a></td>
+      <td>
+      <img src="images/admins_08.gif" width="8" height="16" alt=""></td>
+      <td>
+      <a href="http://www.twitter.com/">
+              <img src="images/Twitter.gif" width="17" height="16" border="0" alt=""></a></td>
+      <td>
+      <img src="images/admins_10.gif" width="12" height="16" alt=""></td>
+    </tr>
+    <tr>
+      <td colspan="4">
+      <img src="images/admins_11.gif" width="53" height="61" alt=""></td>
+    </tr>
+    <tr>
+      <td>
+      <a href="popular.html">
+              <img src="images/Popular.gif" width="103" height="25" border="0" alt=""></a></td>
+      <td>
+      <a href="recent.html">
+              <img src="images/Recent.gif" width="94" height="25" border="0" alt=""></a></td>
+      <td>
+      <a href="academies.html">
+              <img src="images/Academies.gif" width="104" height="25" border="0" alt=""></a></td>
+      <td>
+      <a href="teachers.html">
+              <img src="images/Teachers.gif" width="94" height="25" border="0" alt=""></a></td>
+      <td colspan="5">
+      <a href="admins.html">
+              <img src="images/Admins_Highlighted.gif" width="91" height="25" border="0" alt=""></a></td>
+    </tr>
+    <tr>
+      <td colspan="10">
+      <img src="images/admins_17.gif" width="942" height="13" alt=""></td>
+      </tr>
+    <tr>
+      <td colspan="12">
+        <%= image_tag "spacer.gif", :width => 1059 %>
+      </td>
+      <!--<td>
+      <img src="images/spacer.gif" width="36" height="1" alt=""></td>
+      <td>
+      <img src="images/spacer.gif" width="456" height="1" alt=""></td>
+      <td>
+      <img src="images/spacer.gif" width="103" height="1" alt=""></td>
+      <td>
+      <img src="images/spacer.gif" width="94" height="1" alt=""></td>
+      <td>
+      <img src="images/spacer.gif" width="104" height="1" alt=""></td>
+      <td>
+      <img src="images/spacer.gif" width="94" height="1" alt=""></td>
+      <td>
+      <img src="images/spacer.gif" width="38" height="1" alt=""></td>
+      <td>
+      <img src="images/spacer.gif" width="16" height="1" alt=""></td>
+      <td>
+      <img src="images/spacer.gif" width="8" height="1" alt=""></td>
+      <td>
+      <img src="images/spacer.gif" width="17" height="1" alt=""></td>
+      <td>
+      <img src="images/spacer.gif" width="12" height="1" alt=""></td>
+      <td>
+      <img src="images/spacer.gif" width="81" height="1" alt=""></td>-->
+    </tr>
+  </table>
+<!--  <div id="search">
+    <% form_tag({:controller => 'searches', :action => 'index'}, :method => 'get') do %>
+      <%= text_field_tag "q", params[:q] %>
+      <%= submit_tag "Search" %>
+    <% end %>
+  </div>-->
+</div>

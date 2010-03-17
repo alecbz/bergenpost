@@ -16,7 +16,7 @@
     <h5><%= link_to year.to_s, "/archives/" + year.to_s %></h5>
     <ul>
       <% ('01'..'12').each do |m| %>
-        <li><%= link_to @months[m.to_i], "/archives/" + year.to_s + "/" + m %></li>
+        <li><%= link_to Date::MONTHNAMES[m.to_i], "/archives/" + year.to_s + "/" + m %></li>
       <% end %>
     </ul>
   <% end %>

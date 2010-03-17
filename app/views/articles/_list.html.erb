@@ -1,0 +1,7 @@
+<div class="articles">
+  <% list.each do |article| %>
+    <% div_for article, :class => cycle('odd-line','even-line') do %>
+      <%= link_to article.title, article %>
+    <% end %>
+  <% end %>
+</div>

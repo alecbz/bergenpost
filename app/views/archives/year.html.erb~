@@ -1,8 +1,6 @@
-<div class="block_content_left">
-  <div class="block_inside">
-    <h1><%= @year %></h1>
-    <% @articles.each do |article| %>
-      <%= link_to article.title, article %><br />
-    <% end %>
-  </div>
-</div>
+<h1><%= @year %></h1>
+<% if @articles.empty? %>
+  No articles found.
+<% else %>
+  <%= render :partial => 'list', :locals => {:list => @articles } %>
+<% end %>

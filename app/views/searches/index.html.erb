@@ -1,12 +1,6 @@
-<div class="block_content_left">
-  <div class="block_inside">
-    <h1>Search Results</h1>
-    <% if @results.empty? %>
-      No results found.
-    <% end %>
-    <% @results.each do |article| %>
-      <%= link_to article.title, article %>
-      <br />
-    <% end %>
-  </div>
-</div>
+<h1>Search Results</h1>
+<% if @results.empty? %>
+  No results found.
+<% else %>
+  <%= render :partial => 'list', :locals => {:list => @articles } %>
+<% end %>

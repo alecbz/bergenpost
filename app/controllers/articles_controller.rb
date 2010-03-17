@@ -50,26 +50,22 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @months = {1 => 'January', 2 => 'February', 3 => 'March', 4 => 'April', 5 => 'May', 6 => 'June', 7 => 'July', 8 => 'August', 9 => 'September', 10 => 'October', 11 => 'November', 12 => 'December' }
-    
     @years = []
     Article.find(:all).each do |a|
       @years << a.created_at.year unless @years.index a.created_at.year
     end
   
     @article = Article.find(params[:id])
-    @prev = 
-    begin
-      Article.find((params[:id].to_i-1).to_s)
-    rescue
-      @article
-    end
-    @next = 
-    begin
-      Article.find((params[:id].to_i+1).to_s)
-    rescue
-      @article
-    end
+    @prev = begin
+              Article.find((params[:id].to_i-1).to_s)
+            rescue
+              @article
+            end
+    @next = begin
+              Article.find((params[:id].to_i+1).to_s)
+            rescue
+              @article
+            end
     Article.increment_counter(:views, params[:id])
 
     unless params[:comment].nil? or params[:comment].empty?
