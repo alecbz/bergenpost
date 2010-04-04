@@ -1,12 +1,18 @@
-#development:
-#  adapter: sqlite3
-#  database: db/development.sqlite3
-#  timeout: 5000
 development:
-  adapter: mysql
-  encoding: utf8
-  database: bergenpost_rails
-  pool: 5
-  username: root
-  password: admin
-  socket: /tmp/mysql.sock
+ adapter: sqlite3
+ database: db/development.sqlite3
+ timeout: 5000
+ 
+# development:
+#   adapter: mysql
+#   encoding: utf8
+#   database: bergenpost_rails
+#   pool: 5
+#   username: root
+#   password: admin
+#   socket: /var/run/mysqld/mysqld.sock
+
+production:
+ adapter: sqlite3
+ database: db/production.sqlite3
+ timeout: 5000

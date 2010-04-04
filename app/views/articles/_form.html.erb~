@@ -1,10 +1,4 @@
-<!--<%= javascript_include_tag "tiny_mce/tiny_mce" %>-->
 <%= javascript_include_tag "ckeditor/ckeditor" %>
-<!--<script type="text/javascript">
-tinyMCE.init({
-	mode : "textareas"
-});
-</script>-->
 
 <% form_for(@article) do |f| %>
   <%= f.error_messages %>
@@ -20,7 +14,7 @@ tinyMCE.init({
   <script type="text/javascript">
 	  CKEDITOR.replace( 'article[body]' );
   </script>
-  <h5>Note: Any images you want to add must first be uploaded through <a href="/upload">/upload</a>. We will try and make this easier in the future.</h5>
+  <h5>Note: Any images you want to add must first be uploaded through <a href="/upload">/upload</a>.</h5>
   <p>
     <%= f.label :author %><br />
     <%= select("author", "id", @authors.map {|a| [a.fname + " " + a.lname,a.id]}) %>

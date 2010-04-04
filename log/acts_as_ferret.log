@@ -6436,3 +6436,227 @@ using index in /home/alec/bergenpost/index/development/article
 [article] register class Article with index article
 [article] default field list for index article: [:body, :title]
 Will use local index.
+Will use local index.
+using index in /home/alec/bergenpost/index/development/article
+[article] register class Article with index article
+[article] default field list for index article: [:body, :title]
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime, category_id: integer, views: integer)]
+options: {:limit=>:all, :page=>nil, :offset=>0}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: peru
+-->+(body:peru title:peru) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 5, title: "There once was a man from peru...", body: "<p>\r\n\t...who dreamed he was eating his shoe.</p>\r\n", author_id: 1, created_at: "2010-03-08 05:04:55", updated_at: "2010-03-14 19:42:02", category_id: 1, views: 139>]
+Query: peru
+total hits: 1, results delivered: 1
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime, category_id: integer, views: integer)]
+options: {:limit=>:all, :page=>nil, :offset=>0}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: peru
+-->+(body:peru title:peru) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 5, title: "There once was a man from peru...", body: "<p>\r\n\t...who dreamed he was eating his shoe.</p>\r\n", author_id: 1, created_at: "2010-03-08 05:04:55", updated_at: "2010-03-14 19:42:02", category_id: 1, views: 139>]
+Query: peru
+total hits: 1, results delivered: 1
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime, category_id: integer, views: integer)]
+options: {:limit=>:all, :page=>nil, :offset=>0}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: peru
+-->+(body:peru title:peru) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 5, title: "There once was a man from peru...", body: "<p>\r\n\t...who dreamed he was eating his shoe.</p>\r\n", author_id: 1, created_at: "2010-03-08 05:04:55", updated_at: "2010-03-14 19:42:02", category_id: 1, views: 139>]
+Query: peru
+total hits: 1, results delivered: 1
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime, category_id: integer, views: integer)]
+options: {:limit=>:all, :page=>nil, :offset=>0}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: peru
+-->+(body:peru title:peru) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 5, title: "There once was a man from peru...", body: "<p>\r\n\t...who dreamed he was eating his shoe.</p>\r\n", author_id: 1, created_at: "2010-03-08 05:04:55", updated_at: "2010-03-14 19:42:02", category_id: 1, views: 139>]
+Query: peru
+total hits: 1, results delivered: 1
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime, category_id: integer, views: integer)]
+options: {:limit=>:all, :page=>nil, :offset=>0}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: peru
+-->+(body:peru title:peru) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 5, title: "There once was a man from peru...", body: "<p>\r\n\t...who dreamed he was eating his shoe.</p>\r\n", author_id: 1, created_at: "2010-03-08 05:04:55", updated_at: "2010-03-14 19:42:02", category_id: 1, views: 139>]
+Query: peru
+total hits: 1, results delivered: 1
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime, category_id: integer, views: integer)]
+options: {:limit=>:all, :page=>nil, :offset=>0}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: peru
+-->+(body:peru title:peru) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 5, title: "There once was a man from peru...", body: "<p>\r\n\t...who dreamed he was eating his shoe.</p>\r\n", author_id: 1, created_at: "2010-03-08 05:04:55", updated_at: "2010-03-14 19:42:02", category_id: 1, views: 139>]
+Query: peru
+total hits: 1, results delivered: 1
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime, category_id: integer, views: integer)]
+options: {:limit=>:all, :page=>nil, :offset=>0}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: Lol
+-->+(body:lol title:lol) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 4, title: "Lol", body: "<p>\r\n\tThis word is new: Zach!</p>\r\n", author_id: 1, created_at: "2010-03-08 04:51:34", updated_at: "2010-03-14 19:41:57", category_id: 1, views: 9>]
+Query: Lol
+total hits: 1, results delivered: 1
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+index_for [Article(id: integer, title: string, body: text, author_id: integer, created_at: datetime, updated_at: datetime, category_id: integer, views: integer)]
+options: {:limit=>:all, :page=>nil, :offset=>0}
+ar_options: {}
+[article] stored_fields: nil
+[article] query: Zach
+-->+(body:zach title:zach) +(class_name:Article)
+[article] now retrieving records from AR with options: {}
+[article] 1 results from AR: [#<Article id: 4, title: "Lol", body: "<p>\r\n\tThis word is new: Zach!</p>\r\n", author_id: 1, created_at: "2010-03-08 04:51:34", updated_at: "2010-03-14 19:41:57", category_id: 1, views: 10>]
+Query: Zach
+total hits: 1, results delivered: 1
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article
+[article] register class Article with index article
+[article] refusing re-registration of class Article

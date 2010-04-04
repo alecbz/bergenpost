@@ -1,10 +1,6 @@
-<div class="block_content_left">
-  <div class="block_inside">
-    <h1>Editing article</h1>
+<h1>Editing article: <%= link_to @article.title, @article %></h1>
+(<%= link_to 'Destroy', @article, :confirm => 'Are you sure?', :method => :delete %>)
+<br /><br />
+<%= render(:partial => "form") %>
 
-    <%= render(:partial => "form") %>
-
-    <%= link_to 'Show', @article %> |
-    <%= link_to 'Back', articles_path %>
-  </div>
-</div>
+<%= link_to 'All articles', articles_path %>

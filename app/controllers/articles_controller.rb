@@ -105,6 +105,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
+#         sphinx_reindex
         flash[:notice] = 'Article was successfully created.'
         format.html { redirect_to @article }
         format.xml  { render :xml => @article, :status => :created, :location => @article }
@@ -142,6 +143,11 @@ class ArticlesController < ApplicationController
   
   private
   
+#   def sphinx_reindex
+#     Dir.chdir('../..')
+#     system('rake thinking_sphinx:reindex')
+#   end
+
   def authenticate  
     authenticate_or_request_with_http_basic do |name, password|
       name == "admin" && Digest::SHA1.hexdigest(password) == "8e11fefdde5ec716ad061d48b24f18fb44e6ab17"

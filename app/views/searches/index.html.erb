@@ -2,5 +2,5 @@
 <% if @results.empty? %>
   No results found.
 <% else %>
-  <%= render :partial => 'list', :locals => {:list => @articles } %>
+  <%= render :partial => 'articles/list', :locals => {:list => @results } %>
 <% end %>
