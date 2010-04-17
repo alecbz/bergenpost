@@ -7,29 +7,13 @@ class Article < ActiveRecord::Base
   
   validates_presence_of :title, :body
   
-  define_index do
-    indexes body
-    indexes title
-  end
+#   define_index do
+#     indexes body
+#     indexes title
+#   end
 
   def popularity
     views*1 + comments.size*1
-  end
-  
-  def self.next(article)
-    if article == Article.last
-      article
-    else
-      Article.find((params[:id].to_i+1).to_s)
-    end
-  end
-  
-  def self.prev(article)
-    if article == Article.first
-      article
-    else
-      Article.find((params[:id].to_i-1).to_s)
-    end
   end
   
 end

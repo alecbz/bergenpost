@@ -7,10 +7,10 @@ class Article < ActiveRecord::Base
   
   validates_presence_of :title, :body
   
-  define_index do
-    indexes body
-    indexes title
-  end
+#   define_index do
+#     indexes body
+#     indexes title
+#   end
 
   def popularity
     views*1 + comments.size*1
